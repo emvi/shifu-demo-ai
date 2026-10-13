@@ -1,0 +1,29 @@
+{{- $label := copy .Page .Content "label" -}}
+{{- $href := copy .Page .Content "href" -}}
+{{- $panelTitle := copy .Page .Content "panel_title" -}}
+{{- $style := get .Content "style" -}}
+{{- $dropdown := get .Content "dropdown" -}}
+
+<li class="nav-item{{ with $style }} nav-item--{{ . }}{{ end }}{{ if $dropdown }} nav-item--dropdown{{ end }}" data-shifu-element="{{ .Content.Position }}">
+    {{- if $dropdown }}
+    <div class="nav-item__head">
+        {{- if $href }}
+        <a class="nav-item__link" href="{{ $href }}">{{ $label }}</a>
+        <button class="nav-item__trigger nav-item__trigger--icon" type="button" aria-expanded="false" aria-label="{{ $label }}">{{ template "icon_chevron.html" }}</button>
+        {{- else }}
+        <button class="nav-item__trigger" type="button" aria-expanded="false">{{ $label }}{{ template "icon_chevron.html" }}</button>
+        {{- end }}
+    </div>
+    <div class="nav-item__panel">
+        <div class="nav-item__panel-inner">
+            {{ with $panelTitle }}<p class="nav-item__panel-title">{{ . }}</p>{{ end }}
+            <div class="nav-item__groups">
+                {{ .CMS.Render .Args .Page (fmt "%s.groups" .Content.Position) (index .Content.Content "groups") }}
+                <slot name="{{ .Content.Position }}/groups"></slot>
+            </div>
+        </div>
+    </div>
+    {{- else }}
+    <a class="nav-item__link" href="{{ or $href "#" }}">{{ $label }}</a>
+    {{- end }}
+</li>

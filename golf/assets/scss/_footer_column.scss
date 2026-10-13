@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+.footer-column {
+    &__title {
+        margin-bottom: 16px;
+        font-family: $font-sans;
+        font-size: .9375rem;
+        font-weight: 600;
+        color: $color-white;
+    }
+
+    &__text {
+        margin-bottom: 16px;
+    }
+
+    &__links {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}

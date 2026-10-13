@@ -1,0 +1,44 @@
+@use "variables" as *;
+
+.price-table {
+    &__inner {
+        max-width: 960px;
+    }
+
+    &__wrap {
+        overflow-x: auto;
+        border: 1px solid $color-line;
+        border-radius: $radius;
+        background: $color-white;
+    }
+
+    &__table {
+        width: 100%;
+        border-collapse: collapse;
+        font-variant-numeric: tabular-nums;
+
+        thead th {
+            padding: 18px 24px;
+            background: $color-green-700;
+            color: $color-white;
+            font-size: .875rem;
+            font-weight: 600;
+            text-align: right;
+
+            &:first-child {
+                text-align: left;
+            }
+        }
+    }
+
+    // only one price column configured
+    &--single .price-row__value:nth-of-type(2) {
+        display: none;
+    }
+
+    &__note {
+        margin-top: 20px;
+        font-size: .875rem;
+        color: $color-muted;
+    }
+}

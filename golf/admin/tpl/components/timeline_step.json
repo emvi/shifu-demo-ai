@@ -1,0 +1,12 @@
+{
+    "label": "Station",
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "title": { "label": "Titel / Jahr" },
+        "text": { "label": "Text", "type": "html" },
+        "image_alt": { "label": "Bild-Alternativtext" }
+    },
+    "data": {
+        "image": { "label": "Bild", "type": "img" }
+    }
+}

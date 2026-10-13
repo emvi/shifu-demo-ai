@@ -1,0 +1,25 @@
+{
+    "label": "Listen-Link",
+    "copy": {
+        "label": { "label": "Beschriftung" },
+        "href": { "label": "Link (optional, z. B. tel:, mailto:)" }
+    },
+    "data": {
+        "icon": {
+            "label": "Icon",
+            "type": "select",
+            "options": {
+                "": "Kein Icon",
+                "phone": "Telefon",
+                "mail": "E-Mail",
+                "pin": "Adresse / Karte",
+                "clock": "Uhrzeit",
+                "calendar": "Kalender",
+                "external": "Externer Link",
+                "download": "Download",
+                "arrow": "Pfeil"
+            }
+        },
+        "new_tab": { "label": "In neuem Tab öffnen", "type": "boolean" }
+    }
+}

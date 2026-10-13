@@ -1,0 +1,24 @@
+@use "variables" as *;
+
+.quick-links {
+    position: relative;
+    z-index: 2;
+    padding-block: clamp(40px, 5vw, 64px);
+
+    &--overlap {
+        padding-top: 0;
+
+        .quick-links__grid {
+            margin-top: clamp(-96px, -6vw, -48px);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 16px;
+
+        @include md {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+    }
+}

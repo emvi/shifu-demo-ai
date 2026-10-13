@@ -1,0 +1,12 @@
+{
+    "label": "Hero",
+    "copy": {
+        "headline": { "label": "Headline (links allowed)", "type": "html" },
+        "text": { "label": "Text", "type": "html" },
+        "image_alt": { "label": "Image alt text" }
+    },
+    "data": {
+        "image": { "label": "Image (optional)", "type": "img" },
+        "anchor": { "label": "Anchor ID (e.g. main)" }
+    }
+}

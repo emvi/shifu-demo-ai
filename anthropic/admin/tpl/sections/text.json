@@ -1,0 +1,22 @@
+{
+    "label": "Text",
+    "copy": {
+        "headline": { "label": "Headline" },
+        "text": { "label": "Text", "type": "html" },
+        "link_label": { "label": "Button label" },
+        "link_href": { "label": "Button link" }
+    },
+    "data": {
+        "level": {
+            "label": "Headline level",
+            "type": "select",
+            "options": { "h2": "H2", "h1": "H1" }
+        },
+        "background": {
+            "label": "Background",
+            "type": "select",
+            "options": { "": "Default", "light": "Light", "dark": "Dark" }
+        },
+        "anchor": { "label": "Anchor ID" }
+    }
+}

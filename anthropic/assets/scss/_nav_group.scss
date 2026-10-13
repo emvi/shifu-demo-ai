@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+.nav-group {
+    &__heading {
+        margin-bottom: 0.5rem;
+        font-size: 0.8125rem;
+        color: $color-muted;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.125rem;
+    }
+}

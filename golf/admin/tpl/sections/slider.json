@@ -1,0 +1,24 @@
+{
+    "label": "Vollbild-Slider",
+    "content": {
+        "slides": {
+            "label": "Slides",
+            "tpl_filter": ["slide"]
+        }
+    },
+    "copy": {
+        "headline": { "label": "Bezeichnung (für Screenreader)" }
+    },
+    "data": {
+        "autoplay": { "label": "Automatisch wechseln", "type": "boolean" },
+        "interval": {
+            "label": "Intervall",
+            "type": "select",
+            "options": {
+                "4": "4 Sekunden",
+                "6": "6 Sekunden",
+                "8": "8 Sekunden"
+            }
+        }
+    }
+}

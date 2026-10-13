@@ -1,0 +1,101 @@
+@use "variables" as *;
+
+.news-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid $color-line;
+    border-radius: $radius;
+    background: $color-white;
+    transition: transform $duration $ease, box-shadow $duration $ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow;
+    }
+
+    &__media {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+        background: $color-sand-dark;
+    }
+
+    &__image {
+        @include cover;
+    }
+
+    &__body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px;
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 12px;
+        font-size: .8125rem;
+        color: $color-muted;
+    }
+
+    &__category {
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: $color-green-100;
+        color: $color-green-700;
+        font-weight: 600;
+    }
+
+    &__title {
+        font-family: $font-serif;
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 1.25;
+
+        a {
+            text-decoration: none;
+
+            // whole card is clickable
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+            }
+        }
+    }
+
+    &__excerpt {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        font-size: .9375rem;
+        color: $color-muted;
+    }
+
+    &__more {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: auto;
+        padding-top: 8px;
+        font-size: .875rem;
+        font-weight: 600;
+        color: $color-green-700;
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            transition: transform $duration $ease;
+        }
+    }
+
+    &:hover &__more .icon {
+        transform: translateX(4px);
+    }
+}

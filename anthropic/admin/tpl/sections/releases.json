@@ -1,0 +1,12 @@
+{
+    "label": "Releases (accordion)",
+    "content": {
+        "items": { "label": "Releases", "tpl_filter": ["release_card"] }
+    },
+    "copy": {
+        "headline": { "label": "Headline" }
+    },
+    "data": {
+        "anchor": { "label": "Anchor ID" }
+    }
+}

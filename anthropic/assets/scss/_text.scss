@@ -1,0 +1,68 @@
+@use "variables" as *;
+
+.text {
+    padding-block: 4rem;
+
+    &--light {
+        background: $ivory-medium;
+    }
+
+    &--dark {
+        background: $slate-dark;
+        color: $ivory-light;
+
+        .button--primary {
+            background: $ivory-light;
+            color: $slate-dark;
+            border-color: $ivory-light;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    &__headline {
+        max-width: 48rem;
+        font-size: clamp(2rem, 4vw, 3.25rem);
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.015em;
+    }
+
+    &__body {
+        max-width: 40rem;
+        font-family: $font-serif;
+        font-size: 1.125rem;
+
+        > * + *,
+        div + div {
+            margin-top: 1rem;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.25rem;
+        }
+
+        ul { list-style: disc; }
+        ol { list-style: decimal; }
+
+        a {
+            text-underline-offset: 0.15em;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+
+        blockquote {
+            margin: 0;
+            padding-left: 1rem;
+            border-left: 2px solid $clay;
+        }
+    }
+}

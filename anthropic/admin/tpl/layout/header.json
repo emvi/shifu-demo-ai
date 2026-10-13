@@ -1,0 +1,18 @@
+{
+    "label": "_Header",
+    "layout": true,
+    "content": {
+        "nav": { "label": "Main navigation", "tpl_filter": ["nav_item"] },
+        "actions": { "label": "Actions (right)", "tpl_filter": ["nav_item"] }
+    },
+    "copy": {
+        "logo_text": { "label": "Logo text / alt text" },
+        "home_href": { "label": "Logo link (default: /)" },
+        "nav_label": { "label": "Navigation aria label" },
+        "menu_label": { "label": "Mobile menu button label" },
+        "skip_label": { "label": "Skip link label" }
+    },
+    "data": {
+        "logo": { "label": "Logo (optional, replaces text)", "type": "img" }
+    }
+}

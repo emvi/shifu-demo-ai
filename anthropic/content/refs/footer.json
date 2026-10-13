@@ -1,0 +1,1047 @@
+{
+    "tpl": "footer",
+    "copy": {
+        "en": {
+            "logo_text": "Anthropic",
+            "home_href": "/",
+            "copyright": "Anthropic PBC"
+        }
+    },
+    "data": {
+        "linkedin": "https://www.linkedin.com/company/anthropicresearch",
+        "x": "https://x.com/AnthropicAI",
+        "youtube": "https://www.youtube.com/@anthropic-ai"
+    },
+    "content": {
+        "columns": [
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Products"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude",
+                                    "href": "https://claude.com/product/overview"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude Code",
+                                    "href": "https://claude.com/product/claude-code"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude Code for Enterprise",
+                                    "href": "https://claude.com/product/claude-code/enterprise"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude Cowork",
+                                    "href": "https://claude.com/product/cowork"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "@Claude",
+                                    "href": "https://claude.com/product/tag"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude Design",
+                                    "href": "https://claude.com/product/design"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude Science",
+                                    "href": "https://claude.com/product/claude-science"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude Security",
+                                    "href": "https://claude.com/product/claude-security"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude in Chrome",
+                                    "href": "https://claude.com/claude-in-chrome"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude for Slack",
+                                    "href": "https://claude.com/claude-for-slack"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude for Microsoft 365",
+                                    "href": "https://claude.com/claude-for-microsoft-365"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Skills",
+                                    "href": "https://claude.com/skills"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Download app",
+                                    "href": "https://claude.com/download"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Pricing",
+                                    "href": "https://claude.com/pricing"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Log in to Claude",
+                                    "href": "https://claude.ai/login"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Models"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Mythos",
+                                    "href": "https://www.anthropic.com/claude/mythos"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Fable",
+                                    "href": "https://www.anthropic.com/claude/fable"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Opus",
+                                    "href": "https://www.anthropic.com/claude/opus"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Sonnet",
+                                    "href": "https://www.anthropic.com/claude/sonnet"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Haiku",
+                                    "href": "https://www.anthropic.com/claude/haiku"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Solutions"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "AI agents",
+                                    "href": "https://claude.com/solutions/agents"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Code modernization",
+                                    "href": "https://claude.com/solutions/code-modernization"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Coding",
+                                    "href": "https://claude.com/solutions/coding"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Commerce",
+                                    "href": "https://claude.com/solutions/commerce"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Customer support",
+                                    "href": "https://claude.com/solutions/customer-support"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Cybersecurity",
+                                    "href": "https://claude.com/solutions/cybersecurity"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Financial advisors",
+                                    "href": "https://claude.com/solutions/financial-advisors"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Financial services",
+                                    "href": "https://claude.com/solutions/financial-services"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Government",
+                                    "href": "https://claude.com/solutions/government"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Healthcare",
+                                    "href": "https://claude.com/solutions/healthcare"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Higher education",
+                                    "href": "https://claude.com/solutions/education"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "K-12 teachers",
+                                    "href": "https://claude.com/solutions/teachers"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Legal",
+                                    "href": "https://claude.com/solutions/legal"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Life sciences",
+                                    "href": "https://claude.com/solutions/life-sciences"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Nonprofits",
+                                    "href": "https://claude.com/solutions/nonprofits"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Sales",
+                                    "href": "https://claude.com/solutions/sales"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Small business",
+                                    "href": "https://claude.com/solutions/small-business"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Claude Platform"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Overview",
+                                    "href": "https://claude.com/platform/api"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Developer docs",
+                                    "href": "https://platform.claude.com/docs"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Pricing",
+                                    "href": "https://claude.com/pricing#api"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Ecosystem",
+                                    "href": "https://claude.com/ecosystem"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Marketplace",
+                                    "href": "https://claude.com/platform/marketplace"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Regional compliance",
+                                    "href": "https://claude.com/regional-compliance"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude on AWS",
+                                    "href": "https://claude.com/partners/claude-on-aws"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Google Cloud",
+                                    "href": "https://claude.com/partners/google-cloud"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Microsoft Foundry",
+                                    "href": "https://claude.com/partners/microsoft-foundry"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Console login",
+                                    "href": "https://platform.claude.com/"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Resources"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Overview",
+                                    "href": "https://claude.com/resources"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Articles",
+                                    "href": "https://claude.com/resources/articles"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Webinars",
+                                    "href": "https://claude.com/resources/webinars"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude partner network",
+                                    "href": "https://claude.com/partners"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Community",
+                                    "href": "https://claude.com/community"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Connectors",
+                                    "href": "https://claude.com/partners/mcp"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Courses",
+                                    "href": "https://academy.claude.com"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Customer stories",
+                                    "href": "https://claude.com/customers"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Developer blog",
+                                    "href": "https://claude.dev"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Engineering at Anthropic",
+                                    "href": "https://www.anthropic.com/engineering"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Events",
+                                    "href": "https://www.anthropic.com/events"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Plugins",
+                                    "href": "https://claude.com/plugins"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Powered by Claude",
+                                    "href": "https://claude.com/partners/powered-by-claude"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Service partners",
+                                    "href": "https://claude.com/partners/services"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Tutorials",
+                                    "href": "https://claude.com/resources/tutorials"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Use cases",
+                                    "href": "https://claude.com/resources/use-cases"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Programs"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Campus",
+                                    "href": "https://claude.com/programs/campus"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Frontier Academy",
+                                    "href": "https://claude.com/programs/frontier-academy"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Startups",
+                                    "href": "https://claude.com/programs/startups"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Scientists",
+                                    "href": "https://claude.com/programs/team-plan-for-scientists"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Help and security"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Availability",
+                                    "href": "https://www.anthropic.com/supported-countries"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Status",
+                                    "href": "https://status.anthropic.com/"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Support center",
+                                    "href": "https://support.claude.com/"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Company"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Anthropic",
+                                    "href": "https://www.anthropic.com/company"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Careers",
+                                    "href": "https://www.anthropic.com/careers"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Leadership",
+                                    "href": "https://www.anthropic.com/company/leadership"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Policy",
+                                    "href": "https://www.anthropic.com/policy"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Economic Futures",
+                                    "href": "https://www.anthropic.com/economic-futures"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Research",
+                                    "href": "https://www.anthropic.com/research"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "News",
+                                    "href": "https://www.anthropic.com/news"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude's Constitution",
+                                    "href": "https://www.anthropic.com/constitution"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Claude Corps",
+                                    "href": "https://www.anthropic.com/claude-corps"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Keep thinking",
+                                    "href": "https://www.anthropic.com/path-to-hope"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Policy on the AI Exponential",
+                                    "href": "https://www.anthropic.com/policy-on-the-ai-exponential"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Responsible Scaling Policy",
+                                    "href": "https://www.anthropic.com/responsible-scaling-policy"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Security and compliance",
+                                    "href": "https://trust.anthropic.com/"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Transparency",
+                                    "href": "https://www.anthropic.com/transparency"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "footer_column",
+                "copy": {
+                    "en": {
+                        "heading": "Terms and policies"
+                    }
+                },
+                "content": {
+                    "links": [
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Privacy policy",
+                                    "href": "https://www.anthropic.com/legal/privacy"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Consumer health data privacy policy",
+                                    "href": "https://www.anthropic.com/legal/consumer-health-data-privacy-policy"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Responsible disclosure policy",
+                                    "href": "https://www.anthropic.com/responsible-disclosure-policy"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Terms of service: Commercial",
+                                    "href": "https://www.anthropic.com/legal/commercial-terms"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Terms of service: Consumer",
+                                    "href": "https://www.anthropic.com/legal/consumer-terms"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Terms of Service: US K-12",
+                                    "href": "https://www.anthropic.com/legal/k12-terms"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Data Processing Agreement: US K-12",
+                                    "href": "https://www.anthropic.com/legal/k12-dpa"
+                                }
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "nav_link",
+                            "copy": {
+                                "en": {
+                                    "label": "Usage policy",
+                                    "href": "https://www.anthropic.com/legal/aup"
+                                }
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

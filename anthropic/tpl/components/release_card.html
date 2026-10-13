@@ -1,0 +1,40 @@
+{{- $title := copy .Page .Content "title" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $date := copy .Page .Content "date" -}}
+{{- $category := copy .Page .Content "category" -}}
+{{- $tagLabel := copy .Page .Content "tag_label" -}}
+{{- $tagHref := copy .Page .Content "tag_href" -}}
+{{- $linkLabel := copy .Page .Content "link_label" -}}
+{{- $linkHref := copy .Page .Content "link_href" -}}
+{{- $open := get .Content "open" -}}
+
+<details class="release-card" data-shifu-element="{{ .Content.Position }}"{{ if $open }} open{{ end }}>
+    <summary class="release-card__summary">
+        <h3 class="release-card__title">{{ $title }}</h3>
+        <span class="release-card__icon" aria-hidden="true">{{ template "icon_chevron.html" }}</span>
+    </summary>
+    <div class="release-card__body">
+        {{ with $text }}<div class="release-card__text">{{ html . }}</div>{{ end }}
+        <dl class="release-card__meta">
+            {{ with $date }}
+            <div class="release-card__meta-item">
+                <dt>{{ or (copy $.Page $.Content "date_label") "Date" }}</dt>
+                <dd>{{ . }}</dd>
+            </div>
+            {{ end }}
+            {{ with $category }}
+            <div class="release-card__meta-item">
+                <dt>{{ or (copy $.Page $.Content "category_label") "Category" }}</dt>
+                <dd>{{ . }}</dd>
+            </div>
+            {{ end }}
+            {{ with $tagLabel }}
+            <div class="release-card__meta-item">
+                <dt>{{ or (copy $.Page $.Content "details_label") "Details" }}</dt>
+                <dd>{{ if $tagHref }}<a href="{{ $tagHref }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}</dd>
+            </div>
+            {{ end }}
+        </dl>
+        {{ with $linkHref }}{{ template "button.html" (dict "Label" (or $linkLabel "Read announcement") "Href" . "Variant" "secondary") }}{{ end }}
+    </div>
+</details>

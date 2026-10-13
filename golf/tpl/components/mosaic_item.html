@@ -1,0 +1,15 @@
+{{- $title := copy .Page .Content "title" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $href := copy .Page .Content "href" -}}
+{{- $linkLabel := default (copy .Page .Content "link_label") "Mehr erfahren" -}}
+{{- $image := get .Content "image" -}}
+{{- $size := default (get .Content "size") "normal" -}}
+
+<a class="mosaic-item mosaic-item--{{ $size }}" href="{{ default $href "#" }}" data-shifu-element="{{ .Content.Position }}">
+    {{- with $image }}<img class="mosaic-item__image" src="{{ . }}" alt="" loading="lazy" />{{ end }}
+    <span class="mosaic-item__body">
+        <span class="mosaic-item__title">{{ $title }}</span>
+        {{- with $text }}<span class="mosaic-item__text">{{ . }}</span>{{ end }}
+        <span class="mosaic-item__more">{{ $linkLabel }}{{ template "icon.html" "arrow" }}</span>
+    </span>
+</a>

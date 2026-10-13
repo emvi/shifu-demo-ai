@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+.footer-column {
+    &__heading {
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: $cloud-medium;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .nav-link__anchor {
+        font-size: 0.875rem;
+        white-space: normal;
+
+        &:hover {
+            color: $clay;
+        }
+    }
+}

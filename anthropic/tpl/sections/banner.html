@@ -1,0 +1,23 @@
+{{- $eyebrow := copy .Page .Content "eyebrow" -}}
+{{- $title := copy .Page .Content "title" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $linkLabel := copy .Page .Content "link_label" -}}
+{{- $linkHref := copy .Page .Content "link_href" -}}
+{{- $imageAlt := copy .Page .Content "image_alt" -}}
+{{- $image := get .Content "image" -}}
+{{- $theme := get .Content "theme" -}}
+{{- $anchor := get .Content "anchor" -}}
+
+<section class="banner banner--{{ or $theme "oat" }}"{{ with $anchor }} id="{{ . }}"{{ end }} data-component="reveal" data-shifu-element="{{ .Content.Position }}">
+    <div class="container">
+        <div class="banner__card">
+            <div class="banner__content">
+                {{ with $eyebrow }}<p class="banner__eyebrow">{{ template "icon_spark.html" }}<span>{{ . }}</span></p>{{ end }}
+                {{ with $title }}<h2 class="banner__title">{{ . }}</h2>{{ end }}
+                {{ with $text }}<div class="banner__text">{{ html . }}</div>{{ end }}
+                {{ with $linkHref }}{{ template "button.html" (dict "Label" (or $linkLabel "Read more") "Href" . "Variant" "primary") }}{{ end }}
+            </div>
+            {{ with $image }}<div class="banner__media"><img class="banner__image" src="{{ . }}" alt="{{ $imageAlt }}" loading="lazy" /></div>{{ end }}
+        </div>
+    </div>
+</section>

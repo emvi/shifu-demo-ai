@@ -1,0 +1,11 @@
+{
+    "label": "Untermenüpunkt",
+    "copy": {
+        "label": { "label": "Beschriftung" },
+        "href": { "label": "Link" },
+        "description": { "label": "Kurzbeschreibung (optional)" }
+    },
+    "data": {
+        "new_tab": { "label": "In neuem Tab öffnen", "type": "boolean" }
+    }
+}

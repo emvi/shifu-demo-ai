@@ -1,0 +1,6 @@
+{{- $label := copy .Page .Content "label" -}}
+{{- $href := copy .Page .Content "href" -}}
+
+<li class="nav-link" data-shifu-element="{{ .Content.Position }}">
+    <a class="nav-link__anchor" href="{{ or $href "#" }}">{{ $label }}</a>
+</li>

@@ -1,0 +1,12 @@
+{
+    "tpl": "floating_link",
+    "copy": {
+        "de": {
+            "label": "Kontakt",
+            "href": "/kontakt"
+        }
+    },
+    "data": {
+        "icon": "info"
+    }
+}

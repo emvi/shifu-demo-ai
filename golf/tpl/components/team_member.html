@@ -1,0 +1,23 @@
+{{- $name := copy .Page .Content "name" -}}
+{{- $role := copy .Page .Content "role" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $email := copy .Page .Content "email" -}}
+{{- $phone := copy .Page .Content "phone" -}}
+{{- $image := get .Content "image" -}}
+
+<article class="team-member" data-shifu-element="{{ .Content.Position }}">
+    <div class="team-member__media">
+        {{- with $image }}<img class="team-member__image" src="{{ . }}" alt="{{ $name }}" loading="lazy" />{{ end }}
+    </div>
+    <div class="team-member__body">
+        {{- with $role }}<p class="team-member__role">{{ . }}</p>{{ end }}
+        {{- with $name }}<h3 class="team-member__name">{{ . }}</h3>{{ end }}
+        {{- with $text }}<div class="team-member__text rich-text">{{ html . }}</div>{{ end }}
+        {{- if or $email $phone }}
+        <ul class="team-member__contact">
+            {{- with $phone }}<li>{{ template "icon.html" "phone" }}<a href="tel:{{ . }}">{{ . }}</a></li>{{ end }}
+            {{- with $email }}<li>{{ template "icon.html" "mail" }}<a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+        </ul>
+        {{- end }}
+    </div>
+</article>

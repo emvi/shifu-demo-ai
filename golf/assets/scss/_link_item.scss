@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+.link-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-top: .15em;
+        color: $color-green-500;
+    }
+
+    &__link {
+        text-decoration: none;
+        transition: color $duration $ease;
+
+        &:hover {
+            color: $color-green-500;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+}

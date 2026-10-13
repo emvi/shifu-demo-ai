@@ -1,0 +1,153 @@
+@use "variables" as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: $color-bg;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+
+    &--scrolled {
+        border-bottom-color: $color-border;
+    }
+
+    &__skip {
+        position: absolute;
+        top: -100px;
+        left: 1rem;
+        z-index: 2;
+        padding: 0.5rem 1rem;
+        background: $slate-dark;
+        color: $ivory-light;
+        border-radius: $radius;
+
+        &:focus {
+            top: 0.5rem;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        min-height: $nav-height;
+    }
+
+    &__logo {
+        display: inline-flex;
+        align-items: center;
+        font-family: $font-serif;
+        font-size: 1.375rem;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &__logo-image {
+        height: 1rem;
+        width: auto;
+    }
+
+    &__toggle {
+        display: none;
+        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: auto;
+        padding: 0;
+        background: none;
+        border: 0;
+        cursor: pointer;
+    }
+
+    &__toggle-bar {
+        position: absolute;
+        left: 0.5rem;
+        right: 0.5rem;
+        height: 1.5px;
+        background: currentColor;
+        transition: transform 0.3s $ease;
+
+        &:nth-child(1) { top: calc(50% - 4px); }
+        &:nth-child(2) { top: calc(50% + 3px); }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__list,
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    // mobile: menu is collapsible once JS is available
+    @include below-lg {
+        &--js &__toggle {
+            display: block;
+        }
+
+        &--js &__menu {
+            display: none;
+            position: fixed;
+            inset: $nav-height 0 0;
+            overflow-y: auto;
+            padding: 1rem $gutter-mobile 2rem;
+            background: $color-bg;
+        }
+
+        &--open &__menu {
+            display: flex;
+        }
+
+        &--open &__toggle-bar:nth-child(1) { transform: translateY(3.5px) rotate(45deg); }
+        &--open &__toggle-bar:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
+
+        &__actions {
+            padding-top: 1rem;
+            border-top: 1px solid $color-border;
+        }
+    }
+
+    @include lg {
+        &__inner {
+            flex-wrap: nowrap;
+            gap: 2.5rem;
+        }
+
+        &__menu {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: auto;
+            flex: 1;
+            padding: 0;
+        }
+
+        &__list,
+        &__actions {
+            flex-direction: row;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        &__actions {
+            gap: 0.5rem;
+        }
+    }
+}
+
+html.nav-open {
+    @include below-lg {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "label": "Link",
+    "copy": {
+        "label": { "label": "Label" },
+        "href": { "label": "Link" }
+    }
+}

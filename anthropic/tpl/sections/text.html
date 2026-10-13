@@ -1,0 +1,15 @@
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $linkLabel := copy .Page .Content "link_label" -}}
+{{- $linkHref := copy .Page .Content "link_href" -}}
+{{- $background := get .Content "background" -}}
+{{- $level := get .Content "level" -}}
+{{- $anchor := get .Content "anchor" -}}
+
+<section class="text{{ with $background }} text--{{ . }}{{ end }}"{{ with $anchor }} id="{{ . }}"{{ end }} data-shifu-element="{{ .Content.Position }}">
+    <div class="text__inner container">
+        {{ with $headline }}{{ if eq $level "h1" }}<h1 class="text__headline">{{ . }}</h1>{{ else }}<h2 class="text__headline">{{ . }}</h2>{{ end }}{{ end }}
+        {{ with $text }}<div class="text__body">{{ html . }}</div>{{ end }}
+        {{ with $linkHref }}{{ template "button.html" (dict "Label" (or $linkLabel "Learn more") "Href" . "Variant" "primary") }}{{ end }}
+    </div>
+</section>

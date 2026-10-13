@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" preserveAspectRatio="xMidYMid slice">
+  <rect width="1600" height="1000" fill="#e6efe0"/>
+  <circle cx="582" cy="250" r="80" fill="#fbe7b0"/>
+  <path d="M0 1000 L0 450 Q133 398 267 475 Q400 472 533 462 Q667 345 800 483 Q933 491 1067 462 Q1200 402 1333 450 Q1467 329 1600 452 L1600 1000 Z" fill="#c6dcb2"/>
+  <path d="M0 1000 L0 600 Q133 590 267 629 Q400 558 533 587 Q667 613 800 600 Q933 656 1067 607 Q1200 541 1333 595 Q1467 522 1600 628 L1600 1000 Z" fill="#98c38a"/>
+  <path d="M0 1000 L0 750 Q133 728 267 759 Q400 785 533 728 Q667 673 800 739 Q933 772 1067 770 Q1200 703 1333 731 Q1467 758 1600 737 L1600 1000 Z" fill="#5d9a5a"/>
+  <circle cx="512" cy="610" r="50" fill="#356c3f" opacity=".85"/>
+  <circle cx="888" cy="616" r="51" fill="#356c3f" opacity=".85"/>
+  <circle cx="1407" cy="612" r="49" fill="#356c3f" opacity=".85"/>
+  <circle cx="1093" cy="695" r="32" fill="#356c3f" opacity=".85"/>
+  <circle cx="149" cy="687" r="30" fill="#356c3f" opacity=".85"/>
+  <circle cx="656" cy="609" r="56" fill="#356c3f" opacity=".85"/>
+  <ellipse cx="944" cy="780" rx="144" ry="25" fill="#c6dcb2"/>
+  <rect x="942" y="500" width="4" height="280" fill="#f7f7f5"/>
+  <path d="M946 500 l112 35 l-112 35 Z" fill="#c8402f"/>
+</svg>

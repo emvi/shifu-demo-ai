@@ -1,0 +1,82 @@
+@use "variables" as *;
+
+.banner {
+    --banner-bg: #{$oat};
+    --banner-text: #{$slate-dark};
+
+    padding-block: 1.5rem;
+
+    &--clay { --banner-bg: #{$clay}; }
+    &--ivory { --banner-bg: #{$ivory-dark}; }
+    &--slate {
+        --banner-bg: #{$slate-dark};
+        --banner-text: #{$ivory-light};
+    }
+
+    &__card {
+        display: grid;
+        gap: 2rem;
+        padding: 2rem;
+        background: var(--banner-bg);
+        color: var(--banner-text);
+        border-radius: $radius-lg;
+
+        @include md {
+            padding: 3rem;
+        }
+
+        @include lg {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            min-height: 22rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    &__eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.125rem;
+        font-weight: 500;
+
+        .icon--spark {
+            color: $accent;
+        }
+    }
+
+    &--clay &__eyebrow .icon--spark {
+        color: $slate-dark;
+    }
+
+    &__title {
+        font-size: clamp(2rem, 4vw, 3.25rem);
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -0.015em;
+    }
+
+    &__text {
+        max-width: 32rem;
+        font-family: $font-serif;
+        font-size: 1.125rem;
+    }
+
+    &--slate .button--primary {
+        background: $ivory-light;
+        color: $slate-dark;
+        border-color: $ivory-light;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        border-radius: $radius;
+    }
+}

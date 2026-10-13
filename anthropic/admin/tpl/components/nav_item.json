@@ -1,0 +1,24 @@
+{
+    "label": "Navigation item",
+    "content": {
+        "groups": { "label": "Dropdown groups", "tpl_filter": ["nav_group"] }
+    },
+    "copy": {
+        "label": { "label": "Label" },
+        "href": { "label": "Link (optional for dropdowns)" },
+        "panel_title": { "label": "Dropdown title (optional)" }
+    },
+    "data": {
+        "dropdown": { "label": "Dropdown (enable to add groups)", "type": "boolean" },
+        "style": {
+            "label": "Style",
+            "type": "select",
+            "options": {
+                "": "Link",
+                "button-primary": "Button (dark)",
+                "button-secondary": "Button (outline)",
+                "muted": "Muted"
+            }
+        }
+    }
+}

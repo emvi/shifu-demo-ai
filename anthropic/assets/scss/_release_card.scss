@@ -1,0 +1,87 @@
+@use "variables" as *;
+
+.release-card {
+    border-bottom: 1px solid $color-border;
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 1.5rem;
+        list-style: none;
+        cursor: pointer;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &:hover .release-card__title {
+            color: $accent;
+        }
+    }
+
+    &__title {
+        font-size: clamp(1.25rem, 2vw, 1.75rem);
+        font-weight: 500;
+        line-height: 1.2;
+        transition: color 0.2s;
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid $color-border;
+        border-radius: 50%;
+        transition: transform 0.3s $ease;
+    }
+
+    &[open] &__icon {
+        transform: rotate(180deg);
+    }
+
+    &__body {
+        display: grid;
+        gap: 1.5rem;
+        justify-items: start;
+        padding-bottom: 2rem;
+    }
+
+    &__text {
+        max-width: 40rem;
+        font-family: $font-serif;
+        font-size: 1.125rem;
+        color: $slate-medium;
+    }
+
+    &__meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+        gap: 1rem 2rem;
+        width: 100%;
+        max-width: 40rem;
+    }
+
+    &__meta-item {
+        dt {
+            margin-bottom: 0.25rem;
+            font-size: 0.8125rem;
+            color: $color-muted;
+        }
+
+        dd {
+            font-size: 0.9375rem;
+        }
+
+        a {
+            text-underline-offset: 0.15em;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}

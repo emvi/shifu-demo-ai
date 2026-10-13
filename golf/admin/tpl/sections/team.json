@@ -1,0 +1,33 @@
+{
+    "label": "Team",
+    "content": {
+        "members": {
+            "label": "Personen",
+            "tpl_filter": ["team_member"]
+        }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "intro": { "label": "Einleitung", "type": "html" },
+        "anchor": { "label": "Anker-ID (optional)" }
+    },
+    "data": {
+        "columns": {
+            "label": "Spalten",
+            "type": "select",
+            "options": {
+                "3": "3 Spalten",
+                "4": "4 Spalten"
+            }
+        },
+        "background": {
+            "label": "Hintergrund",
+            "type": "select",
+            "options": {
+                "": "Weiß",
+                "light": "Hell"
+            }
+        }
+    }
+}

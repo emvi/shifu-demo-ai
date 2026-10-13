@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+.container {
+    width: 100%;
+    max-width: $max-width;
+    margin-inline: auto;
+    padding-inline: $gutter-mobile;
+
+    @include md {
+        padding-inline: $gutter;
+    }
+}
+
+// scroll reveal (classes are only added by JS, so content stays visible without it)
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s $ease, transform 0.8s $ease;
+
+    &--visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

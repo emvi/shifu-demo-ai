@@ -1,0 +1,18 @@
+{
+    "label": "_Footer",
+    "layout": true,
+    "content": {
+        "columns": { "label": "Link columns", "tpl_filter": ["footer_column"] }
+    },
+    "copy": {
+        "logo_text": { "label": "Logo text / alt text" },
+        "home_href": { "label": "Logo link (default: /)" },
+        "copyright": { "label": "Copyright holder" }
+    },
+    "data": {
+        "logo": { "label": "Logo (optional, replaces text)", "type": "img" },
+        "linkedin": { "label": "LinkedIn URL" },
+        "x": { "label": "X URL" },
+        "youtube": { "label": "YouTube URL" }
+    }
+}

@@ -1,0 +1,11 @@
+{{- $label := copy .Page .Content "label" -}}
+{{- $href := copy .Page .Content "href" -}}
+{{- $description := copy .Page .Content "description" -}}
+{{- $newTab := get .Content "new_tab" -}}
+
+<li class="nav-subitem" data-shifu-element="{{ .Content.Position }}">
+    <a class="nav-subitem__link" href="{{ default $href "#" }}"{{ if $newTab }} target="_blank" rel="noopener"{{ end }}>
+        <span class="nav-subitem__label">{{ $label }}</span>
+        {{- with $description }}<span class="nav-subitem__description">{{ . }}</span>{{ end }}
+    </a>
+</li>

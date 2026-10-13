@@ -1,0 +1,19 @@
+{{- $title := copy .Page .Content "title" -}}
+{{- $category := copy .Page .Content "category" -}}
+{{- $href := copy .Page .Content "href" -}}
+{{- $imageAlt := copy .Page .Content "image_alt" -}}
+{{- $image := get .Content "image" -}}
+{{- $color := get .Content "color" -}}
+
+<li class="teaser teaser--{{ or $color "oat" }}" data-shifu-element="{{ .Content.Position }}">
+    <a class="teaser__link" href="{{ or $href "#" }}">
+        <div class="teaser__media">
+            {{- if $image }}<img class="teaser__image" src="{{ $image }}" alt="{{ $imageAlt }}" loading="lazy" />{{ else }}{{ template "icon_pattern.html" }}{{ end -}}
+        </div>
+        <div class="teaser__body">
+            <h3 class="teaser__title">{{ $title }}</h3>
+            {{ with $category }}<span class="teaser__category">{{ . }}</span>{{ end }}
+        </div>
+        <span class="teaser__arrow" aria-hidden="true">{{ template "icon_arrow.html" }}</span>
+    </a>
+</li>

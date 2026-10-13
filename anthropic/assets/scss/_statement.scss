@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+.statement {
+    padding-block: 4rem;
+
+    @include lg {
+        padding-block: 6rem;
+    }
+
+    &__headline {
+        max-width: 56rem;
+        margin-bottom: 3rem;
+        font-family: $font-serif;
+        font-size: clamp(2rem, 4.5vw, 3.5rem);
+        font-weight: 400;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+
+        @include lg {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        gap: 1.5rem;
+
+        @include md {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include lg {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+}

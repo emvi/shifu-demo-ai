@@ -1,0 +1,28 @@
+{
+    "label": "Preistabelle",
+    "content": {
+        "rows": {
+            "label": "Zeilen",
+            "tpl_filter": ["price_row"]
+        }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "intro": { "label": "Einleitung", "type": "html" },
+        "column_1": { "label": "Spaltenkopf 1 (z. B. 18 Loch)" },
+        "column_2": { "label": "Spaltenkopf 2 (optional, z. B. 9 Loch)" },
+        "note": { "label": "Hinweis unter der Tabelle", "type": "html" },
+        "anchor": { "label": "Anker-ID (optional)" }
+    },
+    "data": {
+        "background": {
+            "label": "Hintergrund",
+            "type": "select",
+            "options": {
+                "": "Weiß",
+                "light": "Hell"
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use "variables" as *;
+
+.hero {
+    padding-block: 4rem 3rem;
+
+    @include lg {
+        padding-block: 7rem 5rem;
+    }
+
+    &__inner {
+        display: grid;
+        gap: 2rem;
+
+        @include lg {
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            align-items: end;
+            gap: 2rem;
+        }
+    }
+
+    &__headline {
+        font-family: $font-sans;
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 500;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+
+        @include lg {
+            grid-column: 1 / span 8;
+        }
+
+        a {
+            text-decoration: underline;
+            text-decoration-thickness: 0.06em;
+            text-underline-offset: 0.12em;
+            transition: color 0.2s;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    &__text {
+        font-family: $font-serif;
+        font-size: 1.25rem;
+        line-height: 1.45;
+        color: $slate-medium;
+
+        @include lg {
+            grid-column: 9 / span 4;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        border-radius: $radius-lg;
+
+        @include lg {
+            grid-column: 1 / -1;
+        }
+    }
+}

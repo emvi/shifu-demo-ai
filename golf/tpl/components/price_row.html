@@ -1,0 +1,14 @@
+{{- $label := copy .Page .Content "label" -}}
+{{- $note := copy .Page .Content "note" -}}
+{{- $value1 := copy .Page .Content "value_1" -}}
+{{- $value2 := copy .Page .Content "value_2" -}}
+{{- $highlight := get .Content "highlight" -}}
+
+<tr class="price-row{{ if $highlight }} price-row--highlight{{ end }}" data-shifu-element="{{ .Content.Position }}">
+    <th class="price-row__label" scope="row">
+        {{ $label }}
+        {{- with $note }}<small class="price-row__note">{{ . }}</small>{{ end }}
+    </th>
+    <td class="price-row__value">{{ with $value1 }}{{ . }}{{ else }}–{{ end }}</td>
+    <td class="price-row__value">{{ with $value2 }}{{ . }}{{ else }}–{{ end }}</td>
+</tr>

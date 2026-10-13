@@ -1,0 +1,31 @@
+{{- $logo := get .Content "logo" -}}
+{{- $logoText := copy .Page .Content "logo_text" -}}
+{{- $homeHref := or (copy .Page .Content "home_href") "/" -}}
+{{- $copyright := copy .Page .Content "copyright" -}}
+{{- $linkedin := get .Content "linkedin" -}}
+{{- $x := get .Content "x" -}}
+{{- $youtube := get .Content "youtube" -}}
+
+<footer class="footer" id="footer" data-shifu-element="{{ .Content.Position }}">
+    <div class="footer__inner container">
+        <div class="footer__brand">
+            <a class="footer__logo" href="{{ $homeHref }}"{{ with $logoText }} aria-label="{{ . }}"{{ end }}>
+                {{- if $logo }}<img class="footer__logo-image" src="{{ $logo }}" alt="{{ $logoText }}" />{{ else }}{{ $logoText }}{{ end -}}
+            </a>
+            {{ if or $linkedin $x $youtube }}
+            <ul class="footer__social">
+                {{ with $linkedin }}<li><a class="footer__social-link" href="{{ . }}" aria-label="LinkedIn" rel="noopener">{{ template "icon_linkedin.html" }}</a></li>{{ end }}
+                {{ with $x }}<li><a class="footer__social-link" href="{{ . }}" aria-label="X" rel="noopener">{{ template "icon_x.html" }}</a></li>{{ end }}
+                {{ with $youtube }}<li><a class="footer__social-link" href="{{ . }}" aria-label="YouTube" rel="noopener">{{ template "icon_youtube.html" }}</a></li>{{ end }}
+            </ul>
+            {{ end }}
+        </div>
+        <div class="footer__columns">
+            {{ .CMS.Render .Args .Page (fmt "%s.columns" .Content.Position) (index .Content.Content "columns") }}
+            <slot name="{{ .Content.Position }}/columns"></slot>
+        </div>
+    </div>
+    <div class="footer__bottom container">
+        <p class="footer__copyright">&copy; {{ year }}{{ with $copyright }} {{ . }}{{ end }}</p>
+    </div>
+</footer>

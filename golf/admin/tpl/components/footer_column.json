@@ -1,0 +1,13 @@
+{
+    "label": "Footer-Spalte",
+    "content": {
+        "links": {
+            "label": "Links",
+            "tpl_filter": ["link_item"]
+        }
+    },
+    "copy": {
+        "headline": { "label": "Überschrift" },
+        "text": { "label": "Text", "type": "html" }
+    }
+}

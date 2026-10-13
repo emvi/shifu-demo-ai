@@ -1,0 +1,9 @@
+{{- $heading := copy .Page .Content "heading" -}}
+
+<div class="footer-column" data-shifu-element="{{ .Content.Position }}">
+    {{ with $heading }}<h3 class="footer-column__heading">{{ . }}</h3>{{ end }}
+    <ul class="footer-column__list">
+        {{ .CMS.Render .Args .Page (fmt "%s.links" .Content.Position) (index .Content.Content "links") }}
+        <slot name="{{ .Content.Position }}/links"></slot>
+    </ul>
+</div>

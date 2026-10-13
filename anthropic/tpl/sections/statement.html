@@ -1,0 +1,12 @@
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $anchor := get .Content "anchor" -}}
+
+<section class="statement"{{ with $anchor }} id="{{ . }}"{{ end }} data-component="reveal" data-shifu-element="{{ .Content.Position }}">
+    <div class="statement__inner container">
+        {{ with $headline }}<h2 class="statement__headline">{{ . }}</h2>{{ end }}
+        <ul class="statement__grid">
+            {{ .CMS.Render .Args .Page (fmt "%s.items" .Content.Position) (index .Content.Content "items") }}
+            <slot name="{{ .Content.Position }}/items"></slot>
+        </ul>
+    </div>
+</section>

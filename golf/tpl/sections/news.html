@@ -1,0 +1,17 @@
+{{- $kicker := copy .Page .Content "kicker" -}}
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $intro := copy .Page .Content "intro" -}}
+{{- $empty := default (copy .Page .Content "empty_text") "Aktuell gibt es keine Neuigkeiten." -}}
+{{- $items := index .Content.Content "items" -}}
+{{- $background := get .Content "background" -}}
+
+<section class="section news{{ with $background }} section--{{ . }}{{ end }}"{{ with copy .Page .Content "anchor" }} id="{{ . }}"{{ end }} data-shifu-element="{{ .Content.Position }}">
+    <div class="container">
+        {{ template "heading.html" (dict "Kicker" $kicker "Headline" $headline "Intro" $intro) }}
+        <div class="news__grid grid grid--3">
+            {{ .CMS.Render .Args .Page (fmt "%s.items" .Content.Position) $items }}
+            <slot name="{{ .Content.Position }}/items"></slot>
+        </div>
+        {{- if not $items }}<p class="news__empty">{{ $empty }}</p>{{ end }}
+    </div>
+</section>

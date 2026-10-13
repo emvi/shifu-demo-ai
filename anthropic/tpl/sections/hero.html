@@ -1,0 +1,13 @@
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $imageAlt := copy .Page .Content "image_alt" -}}
+{{- $image := get .Content "image" -}}
+{{- $anchor := get .Content "anchor" -}}
+
+<section class="hero{{ if $image }} hero--with-image{{ end }}"{{ with $anchor }} id="{{ . }}"{{ end }} data-component="reveal" data-shifu-element="{{ .Content.Position }}">
+    <div class="hero__inner container">
+        {{ with $headline }}<div class="hero__headline" role="heading" aria-level="1">{{ html . }}</div>{{ end }}
+        {{ with $text }}<div class="hero__text">{{ html . }}</div>{{ end }}
+        {{ with $image }}<img class="hero__image" src="{{ . }}" alt="{{ $imageAlt }}" />{{ end }}
+    </div>
+</section>

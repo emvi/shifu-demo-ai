@@ -1,0 +1,9 @@
+{
+    "tpl": "head",
+    "copy": {
+        "en": {
+            "title": "Anthropic",
+            "meta_description": "Anthropic is an AI safety and research company."
+        }
+    }
+}

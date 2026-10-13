@@ -1,0 +1,11 @@
+{{- $value := copy .Page .Content "value" -}}
+{{- $suffix := copy .Page .Content "suffix" -}}
+{{- $label := copy .Page .Content "label" -}}
+{{- $icon := get .Content "icon" -}}
+{{- $animate := not (get .Content "static") -}}
+
+<div class="stat-item" data-shifu-element="{{ .Content.Position }}">
+    {{- with $icon }}<span class="stat-item__icon">{{ template "icon.html" . }}</span>{{ end }}
+    <p class="stat-item__value"><span class="stat-item__number"{{ if $animate }} data-count="{{ $value }}"{{ end }}>{{ $value }}</span>{{ with $suffix }}<span class="stat-item__suffix">{{ . }}</span>{{ end }}</p>
+    {{- with $label }}<p class="stat-item__label">{{ . }}</p>{{ end }}
+</div>

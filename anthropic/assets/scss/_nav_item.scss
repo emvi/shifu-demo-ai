@@ -1,0 +1,146 @@
+@use "variables" as *;
+
+.nav-item {
+    position: relative;
+
+    &__head {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link,
+    &__trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        padding: 0.625rem 0.75rem;
+        background: none;
+        border: 0;
+        border-radius: $radius;
+        font-size: 0.9375rem;
+        line-height: 1.2;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background: $ivory-medium;
+        }
+    }
+
+    &__trigger--icon {
+        padding-inline: 0.375rem;
+    }
+
+    .icon--chevron {
+        transition: transform 0.2s $ease;
+    }
+
+    &--open .icon--chevron {
+        transform: rotate(180deg);
+    }
+
+    &--muted &__link {
+        color: $color-muted;
+    }
+
+    // button styles (used in the header actions)
+    &--button-primary &__link,
+    &--button-secondary &__link {
+        border: 1px solid $slate-dark;
+        padding: 0.625rem 1rem;
+    }
+
+    &--button-primary &__link {
+        background: $slate-dark;
+        color: $ivory-light;
+
+        &:hover {
+            background: $slate-medium;
+        }
+    }
+
+    &--button-secondary &__link:hover {
+        background: $slate-dark;
+        color: $ivory-light;
+    }
+
+    // dropdown panel
+    &__panel-title {
+        margin-bottom: 0.75rem;
+        font-size: 0.8125rem;
+        color: $color-muted;
+    }
+
+    &__groups {
+        display: grid;
+        gap: 1.25rem;
+    }
+
+    @include below-lg {
+        &__panel {
+            padding: 0.25rem 0.75rem 0.75rem;
+        }
+
+        // with JS the panels become collapsible
+        .header--js &__panel {
+            display: none;
+        }
+
+        .header--js &--open &__panel {
+            display: block;
+        }
+    }
+
+    @include lg {
+        &__panel {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 10;
+            padding-top: 0.5rem;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-4px);
+            transition: opacity 0.2s, transform 0.2s $ease, visibility 0s linear 0.2s;
+        }
+
+        &__panel-inner {
+            min-width: 15rem;
+            padding: 1.25rem;
+            background: $color-bg;
+            border: 1px solid $color-border;
+            border-radius: $radius-lg;
+            box-shadow: 0 12px 32px rgba($slate-dark, 0.08);
+        }
+
+        &__groups {
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(12rem, auto);
+            gap: 2rem;
+        }
+
+        // keep dropdowns of the right-hand actions inside the viewport
+        .header__actions &__panel {
+            left: auto;
+            right: 0;
+        }
+
+        &--open &__panel,
+        &--dropdown:focus-within &__panel {
+            visibility: visible;
+            opacity: 1;
+            transform: none;
+            transition-delay: 0s;
+        }
+
+        @media (hover: hover) {
+            &--dropdown:hover &__panel {
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+                transition-delay: 0s;
+            }
+        }
+    }
+}

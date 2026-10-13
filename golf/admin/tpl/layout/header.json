@@ -1,0 +1,31 @@
+{
+    "label": "_Header",
+    "layout": true,
+    "content": {
+        "nav": {
+            "label": "Navigation",
+            "tpl_filter": ["nav_item"]
+        },
+        "actions": {
+            "label": "Schnellzugriff (Buttons)",
+            "tpl_filter": ["button"]
+        }
+    },
+    "copy": {
+        "logo_alt": { "label": "Logo Alternativtext" },
+        "home_href": { "label": "Link Startseite" },
+        "menu_label": { "label": "Beschriftung Menü-Button (mobil)" }
+    },
+    "data": {
+        "logo": { "label": "Logo (dunkel)", "type": "img" },
+        "logo_light": { "label": "Logo (hell, über Bildern)", "type": "img" },
+        "style": {
+            "label": "Darstellung",
+            "type": "select",
+            "options": {
+                "": "Transparent über Hero, beim Scrollen weiß",
+                "solid": "Immer weiß"
+            }
+        }
+    }
+}

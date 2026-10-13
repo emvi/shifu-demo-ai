@@ -1,0 +1,12 @@
+{
+    "label": "Preiszeile",
+    "copy": {
+        "label": { "label": "Bezeichnung" },
+        "note": { "label": "Zusatzinfo (optional)" },
+        "value_1": { "label": "Preis Spalte 1" },
+        "value_2": { "label": "Preis Spalte 2 (optional)" }
+    },
+    "data": {
+        "highlight": { "label": "Hervorheben", "type": "boolean" }
+    }
+}

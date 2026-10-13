@@ -1,0 +1,27 @@
+{
+    "label": "Platzstatus",
+    "content": {
+        "items": {
+            "label": "Status-Kacheln",
+            "tpl_filter": ["status_item"]
+        }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "intro": { "label": "Einleitung", "type": "html" },
+        "updated": { "label": "Hinweis / Stand (z. B. „Stand: heute, 8:00 Uhr“)" },
+        "anchor": { "label": "Anker-ID (für Links wie #platzstatus)" }
+    },
+    "data": {
+        "background": {
+            "label": "Hintergrund",
+            "type": "select",
+            "options": {
+                "": "Weiß",
+                "light": "Hell",
+                "dark": "Dunkel"
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "label": "Footer column",
+    "content": {
+        "links": { "label": "Links", "tpl_filter": ["nav_link"] }
+    },
+    "copy": {
+        "heading": { "label": "Heading" }
+    }
+}

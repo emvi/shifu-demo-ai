@@ -1,0 +1,455 @@
+{
+    "display_name": "Der Golfplatz",
+    "path": {
+        "de": "/der-golfplatz"
+    },
+    "sitemap": {
+        "priority": "0.8"
+    },
+    "content": {
+        "content": [
+            {
+                "ref": "head",
+                "copy": {
+                    "de": {
+                        "title": "Der Golfplatz – Golfclub Herford",
+                        "meta_description": "Bahnen, Übungsanlagen und Platzstatus des Golfclub Herford."
+                    }
+                }
+            },
+            {
+                "ref": "header"
+            },
+            {
+                "tpl": "hero",
+                "copy": {
+                    "de": {
+                        "kicker": "Golf erleben",
+                        "headline": "Der Golfplatz",
+                        "text": "<div>Neun abwechslungsreiche Bahnen plus Extra-Abschläge in einer offenen Hügellandschaft.</div>"
+                    }
+                },
+                "data": {
+                    "image": "/static/media/course-green.svg",
+                    "height": "medium",
+                    "align": "left",
+                    "overlay": "medium"
+                },
+                "content": {
+                    "buttons": [
+                        {
+                            "tpl": "button",
+                            "copy": {
+                                "de": {
+                                    "label": "Startzeit buchen",
+                                    "href": "/kontakt"
+                                }
+                            },
+                            "data": {
+                                "variant": "light",
+                                "icon": "calendar"
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "text",
+                "copy": {
+                    "de": {
+                        "kicker": "Platzbeschreibung",
+                        "headline": "Abwechslung auf jeder Bahn",
+                        "text": "<div>Der Platz verbindet offene Spielbahnen mit Passagen entlang des Waldes. Die Grüns sind mittelgroß und gut lesbar, Wasserhindernisse kommen an drei Bahnen ins Spiel.</div><div>Durch die zusätzlichen Abschläge entsteht auf der zweiten Runde ein neues Spielgefühl – ideal für eine volle 18-Loch-Runde.</div>"
+                    }
+                },
+                "data": {
+                    "layout": "two"
+                },
+                "content": {
+                    "buttons": []
+                }
+            },
+            {
+                "tpl": "holes",
+                "copy": {
+                    "de": {
+                        "kicker": "Bahn für Bahn",
+                        "headline": "Die Bahnen",
+                        "anchor": "bahnen",
+                        "intro": "<div>Ein kurzer Überblick über die Spielbahnen. Bei Bahnen mit Video lädt der Player erst nach Klick.</div>"
+                    }
+                },
+                "data": {
+                    "background": "light"
+                },
+                "content": {
+                    "items": [
+                        {
+                            "tpl": "hole_card",
+                            "copy": {
+                                "de": {
+                                    "number": "1",
+                                    "title": "Der Auftakt",
+                                    "par": "4",
+                                    "length": "318 m",
+                                    "hcp": "11",
+                                    "text": "<div>Breites Fairway zum Einspielen, das Grün wird von zwei Bunkern bewacht.</div>"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/course-fairway.svg",
+                                "youtube_id": "dQw4w9WgXcQ"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "hole_card",
+                            "copy": {
+                                "de": {
+                                    "number": "2/11",
+                                    "title": "Am Teich",
+                                    "par": "3",
+                                    "length": "142 m",
+                                    "hcp": "17",
+                                    "text": "<div>Kurzes Par 3 über das Wasser – Schlägerwahl ist alles.</div>"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/course-green.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "hole_card",
+                            "copy": {
+                                "de": {
+                                    "number": "3",
+                                    "title": "Panorama",
+                                    "par": "5",
+                                    "length": "462 m",
+                                    "hcp": "3",
+                                    "text": "<div>Der höchste Abschlag der Anlage mit Blick bis zum Wiehengebirge.</div>"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/course-panorama.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "hole_card",
+                            "copy": {
+                                "de": {
+                                    "number": "4",
+                                    "title": "Waldkante",
+                                    "par": "4",
+                                    "length": "296 m",
+                                    "hcp": "9",
+                                    "text": "<div>Leichtes Dogleg nach links entlang alter Eichen.</div>"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/course-autumn.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "hole_card",
+                            "copy": {
+                                "de": {
+                                    "number": "5",
+                                    "title": "Bergauf",
+                                    "par": "4",
+                                    "length": "334 m",
+                                    "hcp": "5",
+                                    "text": "<div>Ein langer zweiter Schlag bergauf auf ein onduliertes Grün.</div>"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/course-evening.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "hole_card",
+                            "copy": {
+                                "de": {
+                                    "number": "6",
+                                    "title": "Heimweg",
+                                    "par": "3",
+                                    "length": "158 m",
+                                    "hcp": "15",
+                                    "text": "<div>Zum Abschluss ein Par 3 mit Blick aufs Clubhaus.</div>"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/putting-green.svg"
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "split",
+                "copy": {
+                    "de": {
+                        "kicker": "Training",
+                        "headline": "Übungsanlagen",
+                        "text": "<div>Die Driving Range mit überdachten Abschlagplätzen, ein großes Putting-Grün und ein Chipping-Bereich mit Bunker stehen allen Spielern zur Verfügung.</div><ul><li>12 überdachte Abschläge</li><li>Putting-Grün mit 9 Fahnen</li><li>Kurzspielbereich mit Übungsbunker</li></ul>",
+                        "image_alt": "Driving Range",
+                        "anchor": "training"
+                    }
+                },
+                "data": {
+                    "image": "/static/media/driving-range.svg",
+                    "image_position": "left"
+                },
+                "content": {
+                    "buttons": []
+                }
+            },
+            {
+                "tpl": "status",
+                "copy": {
+                    "de": {
+                        "kicker": "Aktuell",
+                        "headline": "Platzstatus",
+                        "intro": "<div>Bei Frost oder Starkregen können einzelne Bereiche gesperrt sein.</div>",
+                        "updated": "Stand: heute, 8:00 Uhr",
+                        "anchor": "platzstatus"
+                    }
+                },
+                "data": {
+                    "background": "light"
+                },
+                "content": {
+                    "items": [
+                        {
+                            "tpl": "status_item",
+                            "copy": {
+                                "de": {
+                                    "title": "Golfplatz",
+                                    "note": "Alle Bahnen bespielbar"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/course-fairway.svg",
+                                "status": "open"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "status_item",
+                            "copy": {
+                                "de": {
+                                    "title": "Driving Range",
+                                    "note": "Ballautomat in Betrieb"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/driving-range.svg",
+                                "status": "open"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "status_item",
+                            "copy": {
+                                "de": {
+                                    "title": "Golfcarts",
+                                    "note": "Nur auf den Wegen"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/cart.svg",
+                                "status": "limited"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "status_item",
+                            "copy": {
+                                "de": {
+                                    "title": "Sekretariat",
+                                    "note": "Heute ab 9 Uhr"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/office.svg",
+                                "status": "closed"
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "gallery",
+                "copy": {
+                    "de": {
+                        "kicker": "Eindrücke",
+                        "headline": "Galerie",
+                        "anchor": "galerie"
+                    }
+                },
+                "content": {
+                    "images": [
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 1",
+                                    "caption": "Morgens am 1. Abschlag"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-1.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 2"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-2.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 3",
+                                    "caption": "Blick über das Tal"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-3.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 4"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-4.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 5"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-5.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 6",
+                                    "caption": "Herbst an Bahn 4"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-6.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 7"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-7.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 8"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-8.svg"
+                            },
+                            "content": {}
+                        },
+                        {
+                            "tpl": "gallery_image",
+                            "copy": {
+                                "de": {
+                                    "alt": "Golfplatz Impression 9",
+                                    "caption": "Abendrunde"
+                                }
+                            },
+                            "data": {
+                                "image": "/static/media/gallery-9.svg"
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "tpl": "cta",
+                "copy": {
+                    "de": {
+                        "headline": "Lust auf eine Runde?",
+                        "text": "<div>Gäste mit Platzreife sind jederzeit willkommen.</div>"
+                    }
+                },
+                "data": {
+                    "background": "dark"
+                },
+                "content": {
+                    "buttons": [
+                        {
+                            "tpl": "button",
+                            "copy": {
+                                "de": {
+                                    "label": "Startzeit buchen",
+                                    "href": "/kontakt"
+                                }
+                            },
+                            "data": {
+                                "variant": "light",
+                                "icon": "calendar"
+                            },
+                            "content": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "ref": "footer"
+            },
+            {
+                "ref": "contact_button"
+            },
+            {
+                "ref": "end"
+            }
+        ]
+    }
+}

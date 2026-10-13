@@ -1,0 +1,10 @@
+{{- $label := copy .Page .Content "label" -}}
+{{- $href := copy .Page .Content "href" -}}
+{{- $variant := default (get .Content "variant") "primary" -}}
+{{- $icon := get .Content "icon" -}}
+{{- $newTab := get .Content "new_tab" -}}
+
+<a class="button button--{{ $variant }}" href="{{ default $href "#" }}"{{ if $newTab }} target="_blank" rel="noopener"{{ end }} data-shifu-element="{{ .Content.Position }}">
+    <span class="button__label">{{ default $label "Mehr erfahren" }}</span>
+    {{- with $icon }}{{ template "icon.html" . }}{{ end }}
+</a>

@@ -1,0 +1,45 @@
+{
+    "display_name": "Not found",
+    "path": {
+        "en": "/not-found"
+    },
+    "disable_cache": true,
+    "content": {
+        "content": [
+            {
+                "ref": "head",
+                "copy": {
+                    "en": {
+                        "title": "Page not found \\ Anthropic",
+                        "meta_description": "The requested page could not be found."
+                    }
+                }
+            },
+            {
+                "ref": "header"
+            },
+            {
+                "tpl": "text",
+                "copy": {
+                    "en": {
+                        "headline": "Page not found",
+                        "text": "<div>The page you are looking for does not exist or has been moved.</div>",
+                        "link_label": "Back to home",
+                        "link_href": "/"
+                    }
+                },
+                "data": {
+                    "level": "h1",
+                    "anchor": "main"
+                },
+                "content": {}
+            },
+            {
+                "ref": "footer"
+            },
+            {
+                "ref": "end"
+            }
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "label": "Statement with teasers",
+    "content": {
+        "items": { "label": "Teasers", "tpl_filter": ["teaser"] }
+    },
+    "copy": {
+        "headline": { "label": "Headline" }
+    },
+    "data": {
+        "anchor": { "label": "Anchor ID" }
+    }
+}

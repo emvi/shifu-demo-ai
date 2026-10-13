@@ -1,0 +1,34 @@
+{
+    "label": "Button / Link",
+    "copy": {
+        "label": { "label": "Beschriftung" },
+        "href": { "label": "Link" }
+    },
+    "data": {
+        "variant": {
+            "label": "Stil",
+            "type": "select",
+            "options": {
+                "primary": "Primär (grün)",
+                "secondary": "Sekundär (dunkel)",
+                "outline": "Kontur",
+                "light": "Hell (auf dunklem Grund)",
+                "link": "Textlink mit Unterstreichung"
+            }
+        },
+        "icon": {
+            "label": "Icon",
+            "type": "select",
+            "options": {
+                "": "Kein Icon",
+                "arrow": "Pfeil",
+                "external": "Externer Link",
+                "download": "Download",
+                "calendar": "Kalender",
+                "phone": "Telefon",
+                "mail": "E-Mail"
+            }
+        },
+        "new_tab": { "label": "In neuem Tab öffnen", "type": "boolean" }
+    }
+}

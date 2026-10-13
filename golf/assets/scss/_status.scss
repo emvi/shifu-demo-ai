@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+.status {
+    &__grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    &__updated {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+        font-size: .875rem;
+        color: $color-muted;
+
+        .icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

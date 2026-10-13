@@ -1,0 +1,31 @@
+{{- $logo := get .Content "logo" -}}
+{{- $logoText := copy .Page .Content "logo_text" -}}
+{{- $homeHref := or (copy .Page .Content "home_href") "/" -}}
+{{- $menuLabel := or (copy .Page .Content "menu_label") "Menu" -}}
+{{- $skipLabel := or (copy .Page .Content "skip_label") "Skip to main content" -}}
+
+<header class="header" data-component="nav" data-shifu-element="{{ .Content.Position }}">
+    <a class="header__skip" href="#main">{{ $skipLabel }}</a>
+    <div class="header__inner container">
+        <a class="header__logo" href="{{ $homeHref }}"{{ with $logoText }} aria-label="{{ . }}"{{ end }}>
+            {{- if $logo }}<img class="header__logo-image" src="{{ $logo }}" alt="{{ $logoText }}" />{{ else }}{{ $logoText }}{{ end -}}
+        </a>
+        <button class="header__toggle" type="button" aria-expanded="false" aria-controls="header-menu-{{ .Content.Position }}" hidden>
+            <span class="header__toggle-bar"></span>
+            <span class="header__toggle-bar"></span>
+            <span class="visually-hidden">{{ $menuLabel }}</span>
+        </button>
+        <div class="header__menu" id="header-menu-{{ .Content.Position }}">
+            <nav class="header__nav" aria-label="{{ or (copy .Page .Content "nav_label") "Main" }}">
+                <ul class="header__list">
+                    {{ .CMS.Render .Args .Page (fmt "%s.nav" .Content.Position) (index .Content.Content "nav") }}
+                    <slot name="{{ .Content.Position }}/nav"></slot>
+                </ul>
+            </nav>
+            <ul class="header__actions">
+                {{ .CMS.Render .Args .Page (fmt "%s.actions" .Content.Position) (index .Content.Content "actions") }}
+                <slot name="{{ .Content.Position }}/actions"></slot>
+            </ul>
+        </div>
+    </div>
+</header>

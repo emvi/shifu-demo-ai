@@ -1,0 +1,7 @@
+@use "variables" as *;
+
+.team {
+    &__grid {
+        row-gap: 48px;
+    }
+}

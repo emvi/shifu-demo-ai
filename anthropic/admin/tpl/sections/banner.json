@@ -1,0 +1,25 @@
+{
+    "label": "Feature banner",
+    "copy": {
+        "eyebrow": { "label": "Eyebrow" },
+        "title": { "label": "Title" },
+        "text": { "label": "Text", "type": "html" },
+        "link_label": { "label": "Button label" },
+        "link_href": { "label": "Button link" },
+        "image_alt": { "label": "Image alt text" }
+    },
+    "data": {
+        "image": { "label": "Image (optional)", "type": "img" },
+        "theme": {
+            "label": "Theme",
+            "type": "select",
+            "options": {
+                "oat": "Oat",
+                "clay": "Clay",
+                "ivory": "Ivory",
+                "slate": "Slate (dark)"
+            }
+        },
+        "anchor": { "label": "Anchor ID" }
+    }
+}

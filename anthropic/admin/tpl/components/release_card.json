@@ -1,0 +1,19 @@
+{
+    "label": "Release",
+    "copy": {
+        "title": { "label": "Title" },
+        "text": { "label": "Text", "type": "html" },
+        "date": { "label": "Date" },
+        "category": { "label": "Category" },
+        "tag_label": { "label": "Details label (e.g. model)" },
+        "tag_href": { "label": "Details link" },
+        "link_label": { "label": "Button label" },
+        "link_href": { "label": "Button link" },
+        "date_label": { "label": "Caption 'Date' (optional)" },
+        "category_label": { "label": "Caption 'Category' (optional)" },
+        "details_label": { "label": "Caption 'Details' (optional)" }
+    },
+    "data": {
+        "open": { "label": "Open by default", "type": "boolean" }
+    }
+}

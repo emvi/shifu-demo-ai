@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+.releases {
+    padding-block: 4rem;
+
+    @include lg {
+        padding-block: 6rem;
+    }
+
+    &__inner {
+        display: grid;
+        gap: 2rem;
+
+        @include lg {
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+    }
+
+    &__headline {
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+        font-weight: 500;
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+
+        @include lg {
+            grid-column: 1 / span 4;
+        }
+    }
+
+    &__list {
+        border-top: 1px solid $color-border;
+
+        @include lg {
+            grid-column: 5 / -1;
+        }
+    }
+}

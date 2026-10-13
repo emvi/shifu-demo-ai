@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+.logos {
+    &__track {
+        display: grid;
+        gap: 16px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+
+    // Carousel: horizontal scroll strip, auto-scrolled by JS, swipeable by hand
+    &--carousel &__track {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+        mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        > .logo-item {
+            flex: 0 0 clamp(160px, 22vw, 220px);
+            scroll-snap-align: start;
+        }
+    }
+}

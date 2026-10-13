@@ -1,0 +1,32 @@
+{
+    "label": "Logos (Sponsoren / Partner)",
+    "content": {
+        "items": {
+            "label": "Logos",
+            "tpl_filter": ["logo_item"]
+        }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "intro": { "label": "Einleitung", "type": "html" }
+    },
+    "data": {
+        "layout": {
+            "label": "Darstellung",
+            "type": "select",
+            "options": {
+                "carousel": "Laufband (automatisch scrollend)",
+                "grid": "Raster"
+            }
+        },
+        "background": {
+            "label": "Hintergrund",
+            "type": "select",
+            "options": {
+                "": "Weiß",
+                "light": "Hell"
+            }
+        }
+    }
+}

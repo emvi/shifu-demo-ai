@@ -1,0 +1,61 @@
+@use "variables" as *;
+
+.text {
+    &__inner {
+        display: grid;
+        gap: 0;
+    }
+
+    &__head .heading {
+        margin-bottom: 28px;
+    }
+
+    &__body {
+        font-size: 1.125rem;
+    }
+
+    &--one {
+        .text__inner {
+            max-width: $max-width-narrow + 2 * 40px;
+        }
+    }
+
+    &--two &__body {
+        @include md {
+            columns: 2;
+            column-gap: 48px;
+
+            > * {
+                break-inside: avoid;
+            }
+        }
+    }
+
+    &--aside &__inner {
+        @include md {
+            grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+            gap: 64px;
+            align-items: start;
+        }
+    }
+
+    &--aside &__head .heading {
+        margin-bottom: 24px;
+    }
+
+    &--center {
+        text-align: center;
+
+        .text__inner {
+            justify-items: center;
+        }
+
+        .text__actions {
+            justify-content: center;
+        }
+    }
+
+    &--center.text--two &__body {
+        text-align: left;
+    }
+}

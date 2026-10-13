@@ -1,0 +1,16 @@
+{{- $title := copy .Page .Content "title" -}}
+{{- $meta := copy .Page .Content "meta" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $icon := get .Content "icon" -}}
+{{- $highlight := get .Content "highlight" -}}
+
+<article class="info-column{{ if $highlight }} info-column--highlight{{ end }}" data-shifu-element="{{ .Content.Position }}">
+    {{- with $icon }}<span class="info-column__icon">{{ template "icon.html" . }}</span>{{ end }}
+    {{- with $title }}<h3 class="info-column__title">{{ . }}</h3>{{ end }}
+    {{- with $meta }}<p class="info-column__meta">{{ . }}</p>{{ end }}
+    {{- with $text }}<div class="info-column__text rich-text">{{ html . }}</div>{{ end }}
+    <div class="info-column__actions">
+        {{ .CMS.Render .Args .Page (fmt "%s.buttons" .Content.Position) (index .Content.Content "buttons") }}
+        <slot name="{{ .Content.Position }}/buttons"></slot>
+    </div>
+</article>

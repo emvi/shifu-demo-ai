@@ -1,0 +1,54 @@
+// colors
+$ivory-light: #faf9f5;
+$ivory-medium: #f0eee6;
+$ivory-dark: #e8e6dc;
+$slate-dark: #141413;
+$slate-medium: #3d3d3a;
+$slate-light: #5e5d59;
+$cloud-light: #d1cfc5;
+$cloud-medium: #b0aea5;
+$cloud-dark: #87867f;
+$clay: #d97757;
+$accent: #c6613f;
+$oat: #e3dacc;
+$sky: #6a9bcc;
+$olive: #788c5d;
+$cactus: #bcd1ca;
+$heather: #cbcadb;
+$fig: #c46686;
+$kraft: #d4a27f;
+
+$color-bg: $ivory-light;
+$color-text: $slate-dark;
+$color-muted: $slate-light;
+$color-border: rgba($slate-dark, 0.12);
+
+// typography
+$font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+
+// layout
+$max-width: 1440px;
+$gutter: 2rem;
+$gutter-mobile: 1.25rem;
+$radius: 8px;
+$radius-lg: 16px;
+$nav-height: 4.375rem;
+
+$ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+// breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+
+@mixin md {
+    @media (min-width: $breakpoint-md) { @content; }
+}
+
+@mixin lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+}
+
+@mixin below-lg {
+    @media (max-width: $breakpoint-lg - 1px) { @content; }
+}
