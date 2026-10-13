@@ -1,0 +1,28 @@
+@use "variables" as *;
+
+.gallery-image {
+    margin: 0 0 12px;
+    break-inside: avoid;
+
+    &__link {
+        display: block;
+        overflow: hidden;
+        border-radius: 12px;
+        cursor: zoom-in;
+    }
+
+    &__img {
+        width: 100%;
+        transition: transform .6s $ease, opacity $duration $ease;
+    }
+
+    &__link:hover &__img {
+        transform: scale(1.03);
+    }
+
+    &__caption {
+        padding: 8px 2px 0;
+        font-size: .8125rem;
+        color: $color-muted;
+    }
+}

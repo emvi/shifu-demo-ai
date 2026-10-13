@@ -1,0 +1,58 @@
+@use "variables" as *;
+
+.status-item {
+    --status: #{$color-success};
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid $color-line;
+    border-radius: $radius;
+    background: $color-white;
+
+    &--limited { --status: #{$color-warning}; }
+    &--closed { --status: #{$color-danger}; }
+
+    &__image {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 18px 20px 20px;
+        border-top: 4px solid var(--status);
+    }
+
+    &__title {
+        font-family: $font-sans;
+        font-size: 1.0625rem;
+        font-weight: 600;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: .875rem;
+        font-weight: 600;
+        color: var(--status);
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--status);
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--status) 18%, transparent);
+    }
+
+    &__note {
+        font-size: .875rem;
+        line-height: 1.5;
+        color: $color-muted;
+    }
+}

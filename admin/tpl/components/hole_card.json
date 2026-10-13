@@ -1,0 +1,15 @@
+{
+    "label": "Bahn",
+    "copy": {
+        "number": { "label": "Nummer (z. B. 1 oder 2/11)" },
+        "title": { "label": "Titel" },
+        "par": { "label": "Par" },
+        "length": { "label": "Länge (z. B. 312 m)" },
+        "hcp": { "label": "Handicap / Schwierigkeit" },
+        "text": { "label": "Beschreibung", "type": "html" }
+    },
+    "data": {
+        "image": { "label": "Bild (auch Video-Vorschau)", "type": "img" },
+        "youtube_id": { "label": "YouTube-Video-ID (optional, z. B. dQw4w9WgXcQ)" }
+    }
+}

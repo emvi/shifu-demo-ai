@@ -1,0 +1,10 @@
+{
+    "label": "Frage",
+    "copy": {
+        "question": { "label": "Frage" },
+        "answer": { "label": "Antwort", "type": "html" }
+    },
+    "data": {
+        "open": { "label": "Standardmäßig geöffnet", "type": "boolean" }
+    }
+}

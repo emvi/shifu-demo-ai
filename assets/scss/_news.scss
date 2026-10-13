@@ -1,0 +1,11 @@
+@use "variables" as *;
+
+.news {
+    &__empty {
+        padding: 40px;
+        border: 1px dashed $color-line;
+        border-radius: $radius;
+        text-align: center;
+        color: $color-muted;
+    }
+}

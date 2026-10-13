@@ -1,0 +1,24 @@
+{{- $title := copy .Page .Content "title" -}}
+{{- $category := copy .Page .Content "category" -}}
+{{- $date := copy .Page .Content "date" -}}
+{{- $excerpt := copy .Page .Content "excerpt" -}}
+{{- $href := copy .Page .Content "href" -}}
+{{- $linkLabel := default (copy .Page .Content "link_label") "Weiterlesen" -}}
+{{- $image := get .Content "image" -}}
+
+<article class="news-card" data-shifu-element="{{ .Content.Position }}">
+    <div class="news-card__media">
+        {{- with $image }}<img class="news-card__image" src="{{ . }}" alt="" loading="lazy" />{{ end }}
+    </div>
+    <div class="news-card__body">
+        <p class="news-card__meta">
+            {{- with $category }}<span class="news-card__category">{{ . }}</span>{{ end }}
+            {{- with $date }}<span class="news-card__date">{{ . }}</span>{{ end }}
+        </p>
+        <h3 class="news-card__title">
+            {{- if $href }}<a href="{{ $href }}">{{ $title }}</a>{{ else }}{{ $title }}{{ end -}}
+        </h3>
+        {{- with $excerpt }}<p class="news-card__excerpt">{{ . }}</p>{{ end }}
+        {{- with $href }}<span class="news-card__more" aria-hidden="true">{{ $linkLabel }}{{ template "icon.html" "arrow" }}</span>{{ end }}
+    </div>
+</article>

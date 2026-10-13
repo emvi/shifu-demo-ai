@@ -1,0 +1,23 @@
+{{- $kicker := copy .Page .Content "kicker" -}}
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $imageAlt := copy .Page .Content "image_alt" -}}
+{{- $image := get .Content "image" -}}
+{{- $position := default (get .Content "image_position") "right" -}}
+{{- $background := get .Content "background" -}}
+
+<section class="section split split--image-{{ $position }}{{ with $background }} section--{{ . }}{{ end }}"{{ with copy .Page .Content "anchor" }} id="{{ . }}"{{ end }} data-shifu-element="{{ .Content.Position }}">
+    <div class="container split__inner">
+        <div class="split__content">
+            {{ template "heading.html" (dict "Kicker" $kicker "Headline" $headline) }}
+            {{- with $text }}<div class="split__text rich-text">{{ html . }}</div>{{ end }}
+            <div class="split__actions">
+                {{ .CMS.Render .Args .Page (fmt "%s.buttons" .Content.Position) (index .Content.Content "buttons") }}
+                <slot name="{{ .Content.Position }}/buttons"></slot>
+            </div>
+        </div>
+        <figure class="split__media">
+            {{- with $image }}<img class="split__image" src="{{ . }}" alt="{{ $imageAlt }}" loading="lazy" />{{ end }}
+        </figure>
+    </div>
+</section>

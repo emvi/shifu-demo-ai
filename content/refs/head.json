@@ -1,0 +1,13 @@
+{
+    "tpl": "head",
+    "copy": {
+        "de": {
+            "title": "Golfclub Herford",
+            "meta_description": "Golfanlage mit Weitblick – für Gäste, Einsteiger und Mitglieder."
+        }
+    },
+    "data": {
+        "og_image": "/static/media/course-panorama.svg",
+        "favicon": "/static/media/badge.svg"
+    }
+}

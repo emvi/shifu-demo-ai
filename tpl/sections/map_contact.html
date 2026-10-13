@@ -1,0 +1,32 @@
+{{- $kicker := copy .Page .Content "kicker" -}}
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $query := copy .Page .Content "map_query" -}}
+{{- $consent := default (copy .Page .Content "consent_text") "Mit dem Laden der Karte werden Daten an Google übertragen." -}}
+{{- $consentButton := default (copy .Page .Content "consent_button") "Karte laden" -}}
+{{- $image := get .Content "image" -}}
+{{- $badge := get .Content "badge" -}}
+
+<section class="map-contact"{{ with copy .Page .Content "anchor" }} id="{{ . }}"{{ end }} data-shifu-element="{{ .Content.Position }}">
+    <div class="map-contact__map"{{ with $query }} data-component="map" data-map-src="https://www.google.com/maps?q={{ . }}&amp;output=embed"{{ end }}>
+        {{- with $image }}<img class="map-contact__placeholder" src="{{ . }}" alt="" loading="lazy" />{{ end }}
+        {{- with $query }}
+        <div class="map-contact__consent">
+            <p>{{ $consent }}</p>
+            <button class="button button--light map-contact__load" type="button"><span class="button__label">{{ $consentButton }}</span>{{ template "icon.html" "pin" }}</button>
+            <a class="map-contact__external" href="https://www.google.com/maps/search/?api=1&amp;query={{ . }}" target="_blank" rel="noopener">In Google Maps öffnen</a>
+        </div>
+        {{- end }}
+    </div>
+    <div class="container map-contact__inner">
+        <div class="map-contact__card">
+            {{- with $badge }}<img class="map-contact__badge" src="{{ . }}" alt="" width="64" height="64" loading="lazy" />{{ end }}
+            {{ template "heading.html" (dict "Kicker" $kicker "Headline" $headline) }}
+            {{- with $text }}<div class="map-contact__text rich-text">{{ html . }}</div>{{ end }}
+            <ul class="map-contact__links">
+                {{ .CMS.Render .Args .Page (fmt "%s.links" .Content.Position) (index .Content.Content "links") }}
+                <slot name="{{ .Content.Position }}/links"></slot>
+            </ul>
+        </div>
+    </div>
+</section>

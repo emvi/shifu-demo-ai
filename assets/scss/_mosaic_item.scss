@@ -1,0 +1,84 @@
+@use "variables" as *;
+
+.mosaic-item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: $radius;
+    background: $color-green-700;
+    color: $color-white;
+    text-decoration: none;
+    isolation: isolate;
+
+    @include sm {
+        &--tall { grid-row: span 2; }
+        &--wide { grid-column: span 2; }
+    }
+
+    &__image {
+        @include cover;
+        z-index: -2;
+        transition: transform .8s $ease;
+    }
+
+    // flat tint panel behind the text instead of a gradient
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: $color-green-900;
+        opacity: .25;
+        transition: opacity $duration $ease;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+        margin: 12px;
+        padding: 18px 20px;
+        border-radius: 12px;
+        background: rgba($color-green-900, .78);
+        backdrop-filter: blur(6px);
+    }
+
+    &__title {
+        font-family: $font-serif;
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    &__text {
+        font-size: .9375rem;
+        color: rgba($color-white, .8);
+    }
+
+    &__more {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: .875rem;
+        font-weight: 600;
+        color: $color-green-300;
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            transition: transform $duration $ease;
+        }
+    }
+
+    &:hover {
+        .mosaic-item__image { transform: scale(1.05); }
+        .mosaic-item__more .icon { transform: translateX(4px); }
+        &::after { opacity: .1; }
+    }
+
+    @include reduced-motion {
+        &__image { transition: none; }
+    }
+}

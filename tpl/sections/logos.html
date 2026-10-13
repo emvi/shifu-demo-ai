@@ -1,0 +1,15 @@
+{{- $kicker := copy .Page .Content "kicker" -}}
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $intro := copy .Page .Content "intro" -}}
+{{- $layout := default (get .Content "layout") "carousel" -}}
+{{- $background := get .Content "background" -}}
+
+<section class="section logos logos--{{ $layout }}{{ with $background }} section--{{ . }}{{ end }}"{{ if eq $layout "carousel" }} data-component="carousel"{{ end }} data-shifu-element="{{ .Content.Position }}">
+    <div class="container">
+        {{ template "heading.html" (dict "Kicker" $kicker "Headline" $headline "Intro" $intro "Align" "center") }}
+        <ul class="logos__track">
+            {{ .CMS.Render .Args .Page (fmt "%s.items" .Content.Position) (index .Content.Content "items") }}
+            <slot name="{{ .Content.Position }}/items"></slot>
+        </ul>
+    </div>
+</section>

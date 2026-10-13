@@ -1,0 +1,9 @@
+{{- $name := copy .Page .Content "name" -}}
+{{- $href := copy .Page .Content "href" -}}
+{{- $image := get .Content "image" -}}
+
+<li class="logo-item" data-shifu-element="{{ .Content.Position }}">
+    {{- if $href }}<a class="logo-item__link" href="{{ $href }}" target="_blank" rel="noopener">{{ end }}
+    {{- with $image }}<img class="logo-item__image" src="{{ . }}" alt="{{ $name }}" loading="lazy" />{{ else }}<span class="logo-item__name">{{ $name }}</span>{{ end }}
+    {{- if $href }}</a>{{ end }}
+</li>

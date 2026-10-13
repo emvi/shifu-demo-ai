@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1300" width="900" height="1300" preserveAspectRatio="xMidYMid slice">
+  <rect width="900" height="1300" fill="#efe2cf"/>
+  <circle cx="740" cy="325" r="72" fill="#f2c48d"/>
+  <path d="M0 1300 L0 585 Q75 595 150 615 Q225 432 300 565 Q375 481 450 568 Q525 645 600 569 Q675 486 750 548 Q825 511 900 570 L900 1300 Z" fill="#d8c08f"/>
+  <path d="M0 1300 L0 780 Q75 827 150 774 Q225 780 300 777 Q375 671 450 816 Q525 815 600 821 Q675 730 750 819 Q825 685 900 782 L900 1300 Z" fill="#b39d5c"/>
+  <path d="M0 1300 L0 975 Q75 998 150 1003 Q225 871 300 983 Q375 1020 450 996 Q525 911 600 1000 Q675 875 750 1006 Q825 916 900 968 L900 1300 Z" fill="#7f8a4a"/>
+  <circle cx="791" cy="841" r="64" fill="#4a5a33" opacity=".85"/>
+  <circle cx="441" cy="852" r="54" fill="#4a5a33" opacity=".85"/>
+  <circle cx="260" cy="910" r="71" fill="#4a5a33" opacity=".85"/>
+  <circle cx="471" cy="915" r="61" fill="#4a5a33" opacity=".85"/>
+  <circle cx="322" cy="871" r="61" fill="#4a5a33" opacity=".85"/>
+  <circle cx="829" cy="837" r="72" fill="#4a5a33" opacity=".85"/>
+  <circle cx="352" cy="794" r="72" fill="#4a5a33" opacity=".85"/>
+  <circle cx="690" cy="836" r="47" fill="#4a5a33" opacity=".85"/>
+</svg>

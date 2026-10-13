@@ -1,0 +1,12 @@
+{{- /*
+    Shared section heading (kicker + headline + intro).
+    Usage: {{ template "heading.html" (dict "Kicker" $kicker "Headline" $headline "Intro" $intro "Align" $align) }}
+    All values are optional; nothing is rendered if all are empty.
+*/ -}}
+{{- if or .Kicker .Headline .Intro -}}
+<header class="heading{{ with .Align }} heading--{{ . }}{{ end }}">
+    {{- with .Kicker }}<p class="heading__kicker">{{ . }}</p>{{ end }}
+    {{- with .Headline }}<h2 class="heading__title">{{ . }}</h2>{{ end }}
+    {{- with .Intro }}<div class="heading__intro rich-text">{{ html . }}</div>{{ end }}
+</header>
+{{- end -}}

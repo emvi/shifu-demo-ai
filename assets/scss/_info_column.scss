@@ -1,0 +1,94 @@
+@use "variables" as *;
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__icon {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 4px;
+        border-radius: 12px;
+        background: $color-green-100;
+        color: $color-green-700;
+    }
+
+    &__title {
+        font-family: $font-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    &__meta {
+        font-size: .9375rem;
+        font-weight: 600;
+        color: $color-green-500;
+    }
+
+    &__text {
+        color: $color-muted;
+
+        .section--dark & {
+            color: rgba($color-white, .75);
+        }
+    }
+
+    &__actions:has(.button) {
+        margin-top: auto;
+        padding-top: 12px;
+    }
+
+    // Variant: cards
+    .info-columns--cards & {
+        padding: 32px;
+        border-radius: $radius;
+        background: $color-white;
+        box-shadow: $shadow-sm;
+        border: 1px solid $color-line;
+    }
+
+    .info-columns--cards.section--dark & {
+        background: rgba($color-white, .06);
+        border-color: rgba($color-white, .12);
+        box-shadow: none;
+    }
+
+    &--highlight {
+        .info-columns--cards & {
+            border-color: $color-green-700;
+            box-shadow: 0 0 0 1px $color-green-700, $shadow;
+        }
+
+        .info-columns--plain & {
+            padding-left: 20px;
+            border-left: 3px solid $color-green-500;
+        }
+    }
+
+    // Variant: numbered list
+    .info-columns--numbered & {
+        counter-increment: info-column;
+        padding-top: 24px;
+        border-top: 1px solid $color-line;
+
+        &::before {
+            content: counter(info-column, decimal-leading-zero);
+            font-family: $font-serif;
+            font-size: 2rem;
+            line-height: 1;
+            color: $color-green-500;
+        }
+    }
+
+    .info-columns--numbered.section--dark & {
+        border-color: rgba($color-white, .15);
+
+        &::before {
+            color: $color-green-300;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{{- $label := default (copy .Page .Content "label") "Kontakt" -}}
+{{- $href := default (copy .Page .Content "href") "/kontakt" -}}
+{{- $icon := default (get .Content "icon") "info" -}}
+
+<a class="floating-link" href="{{ $href }}" aria-label="{{ $label }}" data-shifu-element="{{ .Content.Position }}">
+    {{ template "icon.html" $icon }}
+    <span class="floating-link__label">{{ $label }}</span>
+</a>

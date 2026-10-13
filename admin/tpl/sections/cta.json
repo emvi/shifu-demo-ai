@@ -1,0 +1,26 @@
+{
+    "label": "Call to Action",
+    "content": {
+        "buttons": {
+            "label": "Buttons",
+            "tpl_filter": ["button"]
+        }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "text": { "label": "Text", "type": "html" }
+    },
+    "data": {
+        "image": { "label": "Hintergrundbild (optional)", "type": "img" },
+        "background": {
+            "label": "Farbe",
+            "type": "select",
+            "options": {
+                "green": "Grün",
+                "dark": "Dunkelblau",
+                "light": "Hell"
+            }
+        }
+    }
+}

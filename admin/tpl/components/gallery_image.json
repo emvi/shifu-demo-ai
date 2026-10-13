@@ -1,0 +1,10 @@
+{
+    "label": "Galeriebild",
+    "copy": {
+        "alt": { "label": "Alternativtext" },
+        "caption": { "label": "Bildunterschrift (optional)" }
+    },
+    "data": {
+        "image": { "label": "Bild", "type": "img" }
+    }
+}

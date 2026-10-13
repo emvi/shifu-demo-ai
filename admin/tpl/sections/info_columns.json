@@ -1,0 +1,48 @@
+{
+    "label": "Info-Spalten (Modelle, Öffnungszeiten, Listen)",
+    "content": {
+        "items": {
+            "label": "Spalten",
+            "tpl_filter": ["info_column"]
+        },
+        "buttons": {
+            "label": "Buttons unter den Spalten",
+            "tpl_filter": ["button"]
+        }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "intro": { "label": "Einleitung", "type": "html" },
+        "anchor": { "label": "Anker-ID (z. B. oeffnungszeiten)" }
+    },
+    "data": {
+        "columns": {
+            "label": "Spalten",
+            "type": "select",
+            "options": {
+                "2": "2 Spalten",
+                "3": "3 Spalten",
+                "4": "4 Spalten"
+            }
+        },
+        "style": {
+            "label": "Darstellung",
+            "type": "select",
+            "options": {
+                "plain": "Schlicht",
+                "cards": "Karten",
+                "numbered": "Nummerierte Liste"
+            }
+        },
+        "background": {
+            "label": "Hintergrund",
+            "type": "select",
+            "options": {
+                "": "Weiß",
+                "light": "Hell",
+                "dark": "Dunkel"
+            }
+        }
+    }
+}

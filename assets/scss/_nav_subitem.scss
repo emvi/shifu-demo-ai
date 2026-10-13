@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+.nav-subitem {
+    &__link {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        padding: 10px 12px;
+        border-radius: $radius-sm;
+        text-decoration: none;
+        transition: background-color $duration $ease, color $duration $ease;
+
+        &:hover {
+            background: $color-green-100;
+            color: $color-green-700;
+        }
+    }
+
+    &__label {
+        font-size: .9375rem;
+        font-weight: 500;
+    }
+
+    &__description {
+        font-size: .8125rem;
+        line-height: 1.4;
+        color: $color-muted;
+    }
+
+    @include below-lg {
+        &__link {
+            padding: 8px 12px;
+        }
+    }
+}

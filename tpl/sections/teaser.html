@@ -1,0 +1,24 @@
+{{- $kicker := copy .Page .Content "kicker" -}}
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $image := get .Content "image" -}}
+{{- $badge := get .Content "badge" -}}
+{{- $position := default (get .Content "card_position") "right" -}}
+{{- $parallax := get .Content "parallax" -}}
+
+<section class="teaser teaser--card-{{ $position }}"{{ with copy .Page .Content "anchor" }} id="{{ . }}"{{ end }}{{ if $parallax }} data-component="parallax"{{ end }} data-shifu-element="{{ .Content.Position }}">
+    <div class="container teaser__inner">
+        <div class="teaser__media" data-parallax-layer="-0.06">
+            {{- with $image }}<img class="teaser__image" src="{{ . }}" alt="" loading="lazy" />{{ end }}
+        </div>
+        <div class="teaser__card" data-parallax-layer="0.06">
+            {{- with $badge }}<img class="teaser__badge" src="{{ . }}" alt="" width="72" height="72" loading="lazy" />{{ end }}
+            {{ template "heading.html" (dict "Kicker" $kicker "Headline" $headline) }}
+            {{- with $text }}<div class="teaser__text rich-text">{{ html . }}</div>{{ end }}
+            <div class="teaser__actions">
+                {{ .CMS.Render .Args .Page (fmt "%s.buttons" .Content.Position) (index .Content.Content "buttons") }}
+                <slot name="{{ .Content.Position }}/buttons"></slot>
+            </div>
+        </div>
+    </div>
+</section>

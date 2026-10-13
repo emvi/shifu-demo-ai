@@ -1,0 +1,25 @@
+{
+    "label": "Kennzahl",
+    "copy": {
+        "value": { "label": "Zahl (z. B. 9, 1984)" },
+        "suffix": { "label": "Zusatz (z. B. +, %, ha)" },
+        "label": { "label": "Beschriftung" }
+    },
+    "data": {
+        "icon": {
+            "label": "Icon",
+            "type": "select",
+            "options": {
+                "": "Kein Icon",
+                "flag": "Fahne",
+                "ball": "Golfball",
+                "club": "Schläger",
+                "smile": "Smiley",
+                "users": "Personen",
+                "calendar": "Kalender",
+                "pin": "Ort"
+            }
+        },
+        "static": { "label": "Nicht hochzählen (z. B. für Jahreszahlen)", "type": "boolean" }
+    }
+}

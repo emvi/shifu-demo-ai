@@ -1,0 +1,108 @@
+@use "variables" as *;
+
+.teaser {
+    padding-block: $section-space;
+    overflow: hidden;
+
+    &__inner {
+        position: relative;
+        display: grid;
+        align-items: center;
+
+        @include md {
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
+    }
+
+    &__media {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        border-radius: $radius-lg;
+        background: $color-sand-dark;
+
+        @include md {
+            grid-row: 1;
+            grid-column: 1 / span 8;
+            aspect-ratio: 16 / 11;
+        }
+    }
+
+    &__image {
+        @include cover;
+        // room for the parallax movement
+        inset: -6% 0;
+        height: 112%;
+    }
+
+    &__card {
+        position: relative;
+        z-index: 1;
+        margin: -48px 16px 0;
+        padding: clamp(28px, 4vw, 56px);
+        border-radius: $radius-lg;
+        background: $color-green-700;
+        color: rgba($color-white, .85);
+        box-shadow: $shadow-lg;
+
+        @include md {
+            grid-row: 1;
+            grid-column: 7 / span 6;
+            margin: 0;
+        }
+
+        .heading {
+            margin-bottom: 20px;
+        }
+
+        .heading__kicker {
+            color: $color-green-300;
+        }
+
+        .heading__title {
+            color: $color-white;
+            font-size: clamp(1.75rem, 1.2rem + 1.8vw, 2.5rem);
+        }
+
+        .button--primary {
+            background: $color-white;
+            color: $color-green-900;
+
+            &:hover {
+                background: $color-green-100;
+            }
+        }
+
+        .button--link,
+        .button--outline {
+            color: $color-white;
+        }
+    }
+
+    &__badge {
+        position: absolute;
+        top: -36px;
+        right: 32px;
+        width: 72px;
+        height: 72px;
+        padding: 10px;
+        border-radius: 50%;
+        background: $color-white;
+        box-shadow: $shadow;
+        object-fit: contain;
+    }
+
+    &--card-left {
+        .teaser__media {
+            @include md {
+                grid-column: 5 / span 8;
+            }
+        }
+
+        .teaser__card {
+            @include md {
+                grid-column: 1 / span 6;
+            }
+        }
+    }
+}

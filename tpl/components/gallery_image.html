@@ -1,0 +1,12 @@
+{{- $alt := copy .Page .Content "alt" -}}
+{{- $caption := copy .Page .Content "caption" -}}
+{{- $image := get .Content "image" -}}
+
+<figure class="gallery-image" data-shifu-element="{{ .Content.Position }}">
+    {{- with $image }}
+    <a class="gallery-image__link" href="{{ . }}" data-lightbox{{ with $caption }} data-caption="{{ . }}"{{ end }}>
+        <img class="gallery-image__img" src="{{ . }}" alt="{{ $alt }}" loading="lazy" />
+    </a>
+    {{- end }}
+    {{- with $caption }}<figcaption class="gallery-image__caption">{{ . }}</figcaption>{{ end }}
+</figure>

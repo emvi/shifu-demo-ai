@@ -1,0 +1,32 @@
+{
+    "label": "Info-Spalte",
+    "content": {
+        "buttons": {
+            "label": "Buttons",
+            "tpl_filter": ["button"]
+        }
+    },
+    "copy": {
+        "title": { "label": "Titel" },
+        "meta": { "label": "Zusatz (z. B. Preis, Zeitraum)" },
+        "text": { "label": "Text", "type": "html" }
+    },
+    "data": {
+        "icon": {
+            "label": "Icon",
+            "type": "select",
+            "options": {
+                "": "Kein Icon",
+                "flag": "Fahne",
+                "ball": "Golfball",
+                "club": "Schläger",
+                "users": "Personen",
+                "clock": "Uhrzeit",
+                "calendar": "Kalender",
+                "check": "Haken",
+                "info": "Info"
+            }
+        },
+        "highlight": { "label": "Hervorheben", "type": "boolean" }
+    }
+}

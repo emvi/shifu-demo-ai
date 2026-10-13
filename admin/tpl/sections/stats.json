@@ -1,0 +1,26 @@
+{
+    "label": "Kennzahlen",
+    "content": {
+        "items": {
+            "label": "Kennzahlen",
+            "tpl_filter": ["stat_item"]
+        }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "intro": { "label": "Einleitung", "type": "html" },
+        "anchor": { "label": "Anker-ID (optional)" }
+    },
+    "data": {
+        "background": {
+            "label": "Hintergrund",
+            "type": "select",
+            "options": {
+                "": "Weiß",
+                "light": "Hell",
+                "dark": "Dunkel"
+            }
+        }
+    }
+}

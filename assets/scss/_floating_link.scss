@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.floating-link {
+    position: fixed;
+    right: clamp(16px, 2vw, 28px);
+    bottom: clamp(16px, 2vw, 28px);
+    z-index: 40;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    height: 52px;
+    padding: 0 16px;
+    border-radius: 999px;
+    background: $color-green-700;
+    color: $color-white;
+    box-shadow: $shadow-lg;
+    text-decoration: none;
+    font-size: .9375rem;
+    font-weight: 600;
+    transition: background-color $duration $ease, transform $duration $ease;
+
+    &:hover {
+        background: $color-green-900;
+        transform: translateY(-2px);
+    }
+
+    &__label {
+        @media (max-width: #{$breakpoint-sm - 1px}) {
+            display: none;
+        }
+    }
+}
