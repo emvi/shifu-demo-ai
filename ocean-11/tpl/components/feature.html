@@ -1,0 +1,9 @@
+{{- $title := copy .Page .Content "title" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $icon := get .Content "icon" -}}
+
+<article class="feature" data-shifu-element="{{ .Content.Position }}">
+    <div class="feature__icon">{{ template "icon.html" (printf "%v" (default $icon "ship")) }}</div>
+    {{ with $title }}<h3 class="feature__title">{{ . }}</h3>{{ end }}
+    {{ with $text }}<div class="feature__text rich">{{ html . }}</div>{{ end }}
+</article>

@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+.stat {
+    text-align: center;
+
+    &__value {
+        display: block;
+        color: $color-heading;
+        font-family: $font-heading;
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    &__label {
+        display: block;
+        margin-top: 8px;
+        color: $color-accent;
+        font-size: 0.8rem;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+    }
+}

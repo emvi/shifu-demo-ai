@@ -1,0 +1,12 @@
+{
+    "label": "Call to Action",
+    "copy": {
+        "headline": { "label": "Überschrift" },
+        "text": { "label": "Text", "type": "html" },
+        "cta_label": { "label": "Button-Text" },
+        "cta_href": { "label": "Button-Link" }
+    },
+    "data": {
+        "image": { "label": "Hintergrundbild", "type": "img" }
+    }
+}

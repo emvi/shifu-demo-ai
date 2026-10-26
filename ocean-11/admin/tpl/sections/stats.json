@@ -1,0 +1,9 @@
+{
+    "label": "Kennzahlen",
+    "content": {
+        "items": { "label": "Kennzahlen", "tpl_filter": ["stat"] }
+    },
+    "copy": {
+        "headline": { "label": "Überschrift" }
+    }
+}

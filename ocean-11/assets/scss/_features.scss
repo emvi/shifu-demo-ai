@@ -1,0 +1,39 @@
+@use "variables" as *;
+
+.features {
+    @include section-spacing;
+
+    &--panel {
+        background: $color-bg-alt;
+    }
+
+    &__inner {
+        @include container;
+    }
+
+    &__head {
+        max-width: 760px;
+        margin-bottom: 56px;
+    }
+
+    &__intro {
+        color: $color-muted;
+        font-size: 1.1rem;
+    }
+
+    &__grid {
+        display: grid;
+        gap: 2px;
+        background: $color-border;
+        border: 1px solid $color-border;
+
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @include lg {
+        &--cols-3 &__grid { grid-template-columns: repeat(3, 1fr); }
+        &--cols-4 &__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+}

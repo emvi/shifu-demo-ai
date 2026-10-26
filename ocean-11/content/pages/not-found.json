@@ -1,0 +1,37 @@
+{
+    "display_name": "404",
+    "path": {
+        "de": "/404"
+    },
+    "sitemap": { "priority": "0.0" },
+    "content": {
+        "content": [
+            {
+                "ref": "head",
+                "copy": {
+                    "de": {
+                        "title": "Seite nicht gefunden — Ocean 11",
+                        "meta_description": "Diese Seite existiert nicht."
+                    }
+                }
+            },
+            { "ref": "header" },
+            {
+                "tpl": "hero",
+                "copy": {
+                    "de": {
+                        "kicker": "Fehler 404",
+                        "headline": "Verloren im All",
+                        "text": "<div>Dieses System ist nicht auf der Sternenkarte. Vielleicht ein Wurmloch, das sich geschlossen hat?</div>",
+                        "cta_label": "Zurück zur Station",
+                        "cta_href": "/"
+                    }
+                },
+                "data": { "image": "/static/media/lost.jpg", "align": "center" },
+                "content": {}
+            },
+            { "ref": "footer" },
+            { "ref": "end" }
+        ]
+    }
+}

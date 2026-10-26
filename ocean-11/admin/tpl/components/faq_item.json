@@ -1,0 +1,7 @@
+{
+    "label": "FAQ-Eintrag",
+    "copy": {
+        "question": { "label": "Frage" },
+        "answer": { "label": "Antwort", "type": "html" }
+    }
+}

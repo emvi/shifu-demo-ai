@@ -1,0 +1,19 @@
+{{- $kicker := copy .Page .Content "kicker" -}}
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $intro := copy .Page .Content "intro" -}}
+{{- $columns := get .Content "columns" -}}
+{{- $background := get .Content "background" -}}
+
+<section class="features features--cols-{{ with $columns }}{{ . }}{{ else }}3{{ end }}{{ with $background }} features--{{ . }}{{ end }}" data-shifu-element="{{ .Content.Position }}">
+    <div class="features__inner">
+        <div class="features__head">
+            {{ with $kicker }}<p class="kicker">{{ . }}</p>{{ end }}
+            {{ with $headline }}<h2 class="features__headline">{{ . }}</h2>{{ end }}
+            {{ with $intro }}<div class="features__intro rich">{{ html . }}</div>{{ end }}
+        </div>
+        <div class="features__grid">
+            {{ .CMS.Render .Args .Page (fmt "%s.items" .Content.Position) (index .Content.Content "items") }}
+            <slot name="{{ .Content.Position }}/items"></slot>
+        </div>
+    </div>
+</section>

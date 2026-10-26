@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+.nav-item {
+    &__link {
+        display: block;
+        position: relative;
+        padding: 10px 0;
+        color: $color-text;
+        font-family: $font-heading;
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 4px;
+            width: 0;
+            height: 1px;
+            background: $color-accent;
+            transition: width 0.2s;
+        }
+
+        &:hover,
+        &--active {
+            color: $color-heading;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

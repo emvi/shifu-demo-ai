@@ -1,0 +1,25 @@
+{{- $logo := get .Content "logo" -}}
+{{- $name := copy .Page .Content "name" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $disclaimer := copy .Page .Content "disclaimer" -}}
+{{- $copyright := copy .Page .Content "copyright" -}}
+
+<footer class="footer" data-shifu-element="{{ .Content.Position }}">
+    <div class="footer__inner">
+        <div class="footer__brand">
+            {{ with $logo }}<img class="footer__logo" src="{{ . }}" alt="" width="56" height="56" />{{ end }}
+            <div>
+                {{ with $name }}<strong class="footer__name">{{ . }}</strong>{{ end }}
+                {{ with $text }}<div class="footer__text">{{ html . }}</div>{{ end }}
+            </div>
+        </div>
+        <ul class="footer__links">
+            {{ .CMS.Render .Args .Page (fmt "%s.links" .Content.Position) (index .Content.Content "links") }}
+            <slot name="{{ .Content.Position }}/links"></slot>
+        </ul>
+    </div>
+    <div class="footer__bottom">
+        <span class="footer__copyright">&copy; {{ year }} {{ $copyright }}</span>
+        {{ with $disclaimer }}<div class="footer__disclaimer">{{ html . }}</div>{{ end }}
+    </div>
+</footer>

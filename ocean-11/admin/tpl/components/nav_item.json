@@ -1,0 +1,7 @@
+{
+    "label": "Navigationspunkt",
+    "copy": {
+        "label": { "label": "Text" },
+        "href": { "label": "Link" }
+    }
+}

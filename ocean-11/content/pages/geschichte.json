@@ -1,0 +1,94 @@
+{
+    "display_name": "Geschichte",
+    "path": {
+        "de": "/geschichte"
+    },
+    "sitemap": { "priority": "0.8" },
+    "content": {
+        "content": [
+            {
+                "ref": "head",
+                "copy": {
+                    "de": {
+                        "title": "Geschichte — Ocean 11",
+                        "meta_description": "Wie aus elf Piloten eine Corporation wurde: die Geschichte von Ocean 11."
+                    }
+                }
+            },
+            { "ref": "header" },
+            {
+                "tpl": "hero",
+                "copy": {
+                    "de": {
+                        "kicker": "Unsere Geschichte",
+                        "headline": "Wie alles begann",
+                        "text": "<div>Elf Piloten, ein Systemsprung zu viel und eine Idee, die nicht mehr loslassen wollte.</div>"
+                    }
+                },
+                "data": { "image": "/static/media/hero-history.jpg", "size": "compact" },
+                "content": {}
+            },
+            {
+                "tpl": "text",
+                "copy": {
+                    "de": {
+                        "kicker": "Prolog",
+                        "headline": "Der Plan",
+                        "text": "<div>Es begann in einer verrauchten Station in Jita. Elf Piloten aus unterschiedlichen Ecken New Edens — ein Hauler, ein Scout, ein Salvager, zwei Gunner, ein Logi, ein Hacker, ein Händler, ein Spion, ein FC und einer, der einfach nur gut erzählen konnte.</div><div>Gemeinsam fassten sie einen Plan: eine Corporation, in der jeder Spezialist zählt und kein Pilot zurückgelassen wird. So wurde Ocean 11 geboren.</div>"
+                    }
+                },
+                "data": { "width": "narrow" },
+                "content": {}
+            },
+            {
+                "tpl": "timeline",
+                "copy": {
+                    "de": {
+                        "kicker": "Chronik",
+                        "headline": "Meilensteine",
+                        "intro": "<div>Die wichtigsten Kapitel unserer Corp-Geschichte. (Platzhaltertexte — bitte anpassen.)</div>"
+                    }
+                },
+                "content": {
+                    "items": [
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "YC 120", "title": "Gründung", "text": "<div>Elf Piloten gründen Ocean 11 in einer kleinen Highsec-Station.</div>" } }, "content": {} },
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "YC 121", "title": "Der erste Coup", "text": "<div>Mit einer waghalsigen Operation sichert sich die Corp ihre erste Citadel.</div>" } }, "content": {} },
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "YC 123", "title": "Aufbruch nach Lowsec", "text": "<div>Die Crew wächst auf über 50 Piloten und verlegt ihre Operationen nach Lowsec.</div>" } }, "content": {} },
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "YC 125", "title": "Allianz-Beitritt", "text": "<div>Ocean 11 schließt sich einer Allianz an und fliegt erstmals in Nullsec.</div>" } }, "content": {} },
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "Heute", "title": "Das nächste Kapitel", "text": "<div>Über 120 Piloten — und wir schreiben weiter. Vielleicht mit dir.</div>" } }, "content": {} }
+                    ]
+                }
+            },
+            {
+                "tpl": "image_text",
+                "copy": {
+                    "de": {
+                        "kicker": "Werte",
+                        "headline": "Was uns zusammenhält",
+                        "text": "<ul><li><strong>Vertrauen:</strong> Jeder verlässt sich auf jeden.</li><li><strong>Planung:</strong> Erst denken, dann undocken.</li><li><strong>Loyalität:</strong> Wir lassen niemanden zurück.</li><li><strong>Spaß:</strong> Es ist ein Spiel — und das genießen wir.</li></ul>",
+                        "image_alt": "Industrie-Operation",
+                        "cta_label": "Mitmachen",
+                        "cta_href": "/beitreten"
+                    }
+                },
+                "data": { "image": "/static/media/industry.jpg" },
+                "content": {}
+            },
+            {
+                "tpl": "cta",
+                "copy": {
+                    "de": {
+                        "headline": "Schreib das nächste Kapitel mit uns",
+                        "text": "<div>Die Geschichte von Ocean 11 ist noch lange nicht zu Ende.</div>",
+                        "cta_label": "Jetzt beitreten",
+                        "cta_href": "/beitreten"
+                    }
+                },
+                "data": { "image": "/static/media/cta.jpg" },
+                "content": {}
+            },
+            { "ref": "footer" },
+            { "ref": "end" }
+        ]
+    }
+}

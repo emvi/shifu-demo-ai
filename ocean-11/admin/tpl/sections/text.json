@@ -1,0 +1,25 @@
+{
+    "label": "Text",
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "text": { "label": "Text", "type": "html" }
+    },
+    "data": {
+        "background": {
+            "label": "Hintergrund",
+            "type": "select",
+            "options": { "": "Standard", "panel": "Panel" }
+        },
+        "width": {
+            "label": "Breite",
+            "type": "select",
+            "options": { "": "Standard", "narrow": "Schmal" }
+        },
+        "align": {
+            "label": "Ausrichtung",
+            "type": "select",
+            "options": { "": "Links", "center": "Zentriert" }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "label": "_Header",
+    "layout": true,
+    "content": {
+        "nav": { "label": "Navigation", "tpl_filter": ["nav_item"] }
+    },
+    "copy": {
+        "home_label": { "label": "Name" },
+        "cta_label": { "label": "Button-Text" },
+        "cta_href": { "label": "Button-Link" }
+    },
+    "data": {
+        "logo": { "label": "Logo", "type": "img" }
+    }
+}

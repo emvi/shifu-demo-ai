@@ -1,0 +1,22 @@
+{{- $kicker := copy .Page .Content "kicker" -}}
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $text := copy .Page .Content "text" -}}
+{{- $alt := copy .Page .Content "image_alt" -}}
+{{- $ctaLabel := copy .Page .Content "cta_label" -}}
+{{- $ctaHref := copy .Page .Content "cta_href" -}}
+{{- $image := get .Content "image" -}}
+{{- $reverse := get .Content "reverse" -}}
+
+<section class="image-text{{ if $reverse }} image-text--reverse{{ end }}" data-shifu-element="{{ .Content.Position }}">
+    <div class="image-text__inner">
+        <div class="image-text__media">
+            {{ with $image }}<img class="image-text__image" src="{{ . }}" alt="{{ $alt }}" loading="lazy" />{{ end }}
+        </div>
+        <div class="image-text__content">
+            {{ with $kicker }}<p class="kicker">{{ . }}</p>{{ end }}
+            {{ with $headline }}<h2 class="image-text__headline">{{ . }}</h2>{{ end }}
+            {{ with $text }}<div class="image-text__text rich">{{ html . }}</div>{{ end }}
+            {{ with $ctaLabel }}{{ template "button.html" (dict "Label" . "Href" $ctaHref "Variant" "ghost") }}{{ end }}
+        </div>
+    </div>
+</section>

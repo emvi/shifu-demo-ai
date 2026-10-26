@@ -1,0 +1,23 @@
+{
+    "label": "Features",
+    "content": {
+        "items": { "label": "Features", "tpl_filter": ["feature"] }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "intro": { "label": "Einleitung", "type": "html" }
+    },
+    "data": {
+        "columns": {
+            "label": "Spalten",
+            "type": "select",
+            "options": { "2": "2", "3": "3", "4": "4" }
+        },
+        "background": {
+            "label": "Hintergrund",
+            "type": "select",
+            "options": { "": "Standard", "panel": "Panel" }
+        }
+    }
+}

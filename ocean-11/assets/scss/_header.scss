@@ -1,0 +1,132 @@
+@use "variables" as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(6, 8, 11, 0.75);
+    border-bottom: 1px solid $color-border;
+    backdrop-filter: blur(12px);
+
+    &__inner {
+        @include container;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 72px;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: $color-heading;
+    }
+
+    &__logo {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__name {
+        font-family: $font-heading;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+
+    &__toggle {
+        display: none;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 0;
+        background: none;
+        cursor: pointer;
+    }
+
+    &__burger,
+    &__burger::before,
+    &__burger::after {
+        display: block;
+        width: 24px;
+        height: 2px;
+        margin: 0 auto;
+        background: $color-heading;
+        transition: transform 0.2s;
+    }
+
+    &__burger {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &::before { top: -7px; }
+        &::after { top: 7px; }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        padding: 8px 0 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    // Mobilmenü nur einklappen, wenn JS aktiv ist
+    &[data-component-ready] &__toggle {
+        display: block;
+    }
+
+    &[data-component-ready]:not(.header--open) &__nav {
+        display: none;
+    }
+
+    &--open &__burger {
+        background: transparent;
+
+        &::before { transform: translateY(7px) rotate(45deg); }
+        &::after { transform: translateY(-7px) rotate(-45deg); }
+    }
+
+    @include lg {
+        &[data-component-ready] &__toggle {
+            display: none;
+        }
+
+        &[data-component-ready]:not(.header--open) &__nav,
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 32px;
+            width: auto;
+            padding: 0;
+        }
+
+        &__list {
+            flex-direction: row;
+            gap: 32px;
+        }
+
+        &__cta {
+            padding: 10px 22px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{{- $label := copy .Page .Content "label" -}}
+{{- $href := copy .Page .Content "href" -}}
+{{- $current := index .Page.Path .Page.Language -}}
+
+<li class="nav-item" data-shifu-element="{{ .Content.Position }}">
+    <a class="nav-item__link{{ if and $href (eq (printf "%v" $href) $current) }} nav-item__link--active{{ end }}" href="{{ $href }}">{{ default $label "Link" }}</a>
+</li>

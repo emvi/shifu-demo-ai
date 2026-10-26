@@ -1,0 +1,8 @@
+{
+    "label": "_HTML Head",
+    "layout": true,
+    "copy": {
+        "title": { "label": "Titel" },
+        "meta_description": { "label": "Meta-Beschreibung" }
+    }
+}

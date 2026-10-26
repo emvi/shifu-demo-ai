@@ -1,0 +1,7 @@
+{{- $value := copy .Page .Content "value" -}}
+{{- $label := copy .Page .Content "label" -}}
+
+<div class="stat" data-shifu-element="{{ .Content.Position }}">
+    <span class="stat__value">{{ $value }}</span>
+    <span class="stat__label">{{ $label }}</span>
+</div>

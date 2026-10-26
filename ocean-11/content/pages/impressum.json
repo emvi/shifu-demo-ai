@@ -1,0 +1,35 @@
+{
+    "display_name": "Impressum",
+    "path": {
+        "de": "/impressum"
+    },
+    "sitemap": { "priority": "0.2" },
+    "content": {
+        "content": [
+            {
+                "ref": "head",
+                "copy": {
+                    "de": {
+                        "title": "Impressum — Ocean 11",
+                        "meta_description": "Impressum der Website der EVE-Online-Corporation Ocean 11."
+                    }
+                }
+            },
+            { "ref": "header" },
+            {
+                "tpl": "text",
+                "copy": {
+                    "de": {
+                        "kicker": "Rechtliches",
+                        "headline": "Impressum",
+                        "text": "<h1>Angaben gemäß § 5 DDG</h1><div>[Vorname Nachname]<br>[Straße Hausnummer]<br>[PLZ Ort]<br>Deutschland</div><h1>Kontakt</h1><div>E-Mail: [kontakt@example.com]</div><h1>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h1><div>[Vorname Nachname]<br>[Anschrift wie oben]</div><h1>Haftung für Inhalte</h1><div>Die Inhalte dieser Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.</div><h1>Haftung für Links</h1><div>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.</div><h1>Marken &amp; Fan-Content</h1><div>EVE Online, das EVE-Logo, EVE und alle zugehörigen Logos und Designs sind Marken oder eingetragene Marken von CCP hf. Diese Website ist ein nicht-kommerzielles Fan-Projekt und wird von CCP hf. weder unterstützt noch ist sie mit CCP hf. verbunden.</div>"
+                    }
+                },
+                "data": { "width": "narrow" },
+                "content": {}
+            },
+            { "ref": "footer" },
+            { "ref": "end" }
+        ]
+    }
+}

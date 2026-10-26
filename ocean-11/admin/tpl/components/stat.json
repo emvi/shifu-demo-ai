@@ -1,0 +1,7 @@
+{
+    "label": "Kennzahl",
+    "copy": {
+        "value": { "label": "Wert" },
+        "label": { "label": "Beschriftung" }
+    }
+}

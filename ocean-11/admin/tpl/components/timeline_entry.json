@@ -1,0 +1,8 @@
+{
+    "label": "Zeitleisten-Eintrag",
+    "copy": {
+        "date": { "label": "Datum" },
+        "title": { "label": "Titel" },
+        "text": { "label": "Text", "type": "html" }
+    }
+}

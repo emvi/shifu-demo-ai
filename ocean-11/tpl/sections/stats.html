@@ -1,0 +1,11 @@
+{{- $headline := copy .Page .Content "headline" -}}
+
+<section class="stats" data-shifu-element="{{ .Content.Position }}">
+    <div class="stats__inner">
+        {{ with $headline }}<h2 class="stats__headline">{{ . }}</h2>{{ end }}
+        <div class="stats__grid">
+            {{ .CMS.Render .Args .Page (fmt "%s.items" .Content.Position) (index .Content.Content "items") }}
+            <slot name="{{ .Content.Position }}/items"></slot>
+        </div>
+    </div>
+</section>

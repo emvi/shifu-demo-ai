@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.text {
+    @include section-spacing;
+
+    &--panel {
+        background: $color-bg-alt;
+        border-top: 1px solid $color-border;
+        border-bottom: 1px solid $color-border;
+    }
+
+    &__inner {
+        @include container;
+        max-width: 960px;
+    }
+
+    &--narrow &__inner {
+        max-width: 780px;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &__body {
+        color: $color-text;
+
+        h1 {
+            color: $color-heading;
+        }
+    }
+}

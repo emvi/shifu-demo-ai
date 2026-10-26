@@ -1,0 +1,7 @@
+{{- $question := copy .Page .Content "question" -}}
+{{- $answer := copy .Page .Content "answer" -}}
+
+<details class="faq-item" data-shifu-element="{{ .Content.Position }}">
+    <summary class="faq-item__question">{{ default $question "Frage" }}</summary>
+    {{ with $answer }}<div class="faq-item__answer rich">{{ html . }}</div>{{ end }}
+</details>

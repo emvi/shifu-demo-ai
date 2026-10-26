@@ -1,0 +1,113 @@
+{
+    "display_name": "Beitreten",
+    "path": {
+        "de": "/beitreten"
+    },
+    "sitemap": { "priority": "0.9" },
+    "content": {
+        "content": [
+            {
+                "ref": "head",
+                "copy": {
+                    "de": {
+                        "title": "Beitreten — Ocean 11",
+                        "meta_description": "Werde Teil von Ocean 11. Was wir bieten, was wir erwarten und wie du dich bewirbst."
+                    }
+                }
+            },
+            { "ref": "header" },
+            {
+                "tpl": "hero",
+                "copy": {
+                    "de": {
+                        "kicker": "Rekrutierung offen",
+                        "headline": "Werde Teil der Crew",
+                        "text": "<div>Jeder große Coup beginnt mit dem richtigen Team. Wir suchen Piloten, die Verantwortung übernehmen und Spaß am Spiel haben.</div>",
+                        "cta_label": "Bewerbung starten",
+                        "cta_href": "#bewerbung"
+                    }
+                },
+                "data": { "image": "/static/media/hero-join.jpg" },
+                "content": {}
+            },
+            {
+                "tpl": "features",
+                "copy": {
+                    "de": {
+                        "kicker": "Was wir bieten",
+                        "headline": "Deine Vorteile",
+                        "intro": "<div>Bei Ocean 11 fliegst du nie allein.</div>"
+                    }
+                },
+                "data": { "columns": "3" },
+                "content": {
+                    "items": [
+                        { "tpl": "feature", "copy": { "de": { "title": "Kostenlose Schiffe", "text": "<div>Doctrine-Schiffe für Corp-Operationen werden gestellt oder erstattet (SRP).</div>" } }, "data": { "icon": "ship" }, "content": {} },
+                        { "tpl": "feature", "copy": { "de": { "title": "Mentoring", "text": "<div>Erfahrene Piloten helfen dir bei Skills, Fittings und deinen ersten Schritten.</div>" } }, "data": { "icon": "star" }, "content": {} },
+                        { "tpl": "feature", "copy": { "de": { "title": "Sicheres Zuhause", "text": "<div>Corp-Infrastruktur, Citadels und Zugang zu Allianz-Ressourcen.</div>" } }, "data": { "icon": "shield" }, "content": {} },
+                        { "tpl": "feature", "copy": { "de": { "title": "Regelmäßige Ops", "text": "<div>Feste Flottenzeiten in der EU-Prime-Time, dazu spontane Roams.</div>" } }, "data": { "icon": "target" }, "content": {} },
+                        { "tpl": "feature", "copy": { "de": { "title": "Voice & Discord", "text": "<div>Deutschsprachige Community mit Voice-Kanälen und Tools.</div>" } }, "data": { "icon": "headset" }, "content": {} },
+                        { "tpl": "feature", "copy": { "de": { "title": "Gemeinsames Wachstum", "text": "<div>Industrie-Programme und Buyback, damit deine ISK-Konten wachsen.</div>" } }, "data": { "icon": "chart" }, "content": {} }
+                    ]
+                }
+            },
+            {
+                "tpl": "text",
+                "copy": {
+                    "de": {
+                        "kicker": "Was wir erwarten",
+                        "headline": "Anforderungen",
+                        "text": "<ul><li>Mindestens 18 Jahre alt</li><li>Funktionierendes Headset und Discord</li><li>Deutschkenntnisse (Englisch ist ok)</li><li>Teamgeist und Zuverlässigkeit</li><li>Bereitschaft für einen API-/ESI-Check</li></ul><div>Skillpunkte sind uns weniger wichtig als die richtige Einstellung. Auch Neulinge sind willkommen.</div>"
+                    }
+                },
+                "data": { "background": "panel", "width": "narrow" },
+                "content": {}
+            },
+            {
+                "tpl": "timeline",
+                "copy": {
+                    "de": {
+                        "kicker": "So geht's",
+                        "headline": "Der Weg in die Crew",
+                        "intro": "<div>Vier Schritte trennen dich vom Corp-Tag.</div>"
+                    }
+                },
+                "content": {
+                    "items": [
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "Schritt 1", "title": "Discord beitreten", "text": "<div>Komm auf unseren Discord-Server und melde dich im Rekrutierungskanal.</div>" } }, "content": {} },
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "Schritt 2", "title": "Gespräch", "text": "<div>Ein kurzes, lockeres Gespräch mit einem Recruiter im Voice.</div>" } }, "content": {} },
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "Schritt 3", "title": "ESI-Check", "text": "<div>Wir prüfen deinen Charakter — Standard zum Schutz der Corp.</div>" } }, "content": {} },
+                        { "tpl": "timeline_entry", "copy": { "de": { "date": "Schritt 4", "title": "Willkommen an Bord", "text": "<div>Bewerbung im Spiel abschicken, Corp-Tag erhalten, losfliegen.</div>" } }, "content": {} }
+                    ]
+                }
+            },
+            {
+                "tpl": "faq",
+                "copy": { "de": { "kicker": "Fragen", "headline": "Häufige Fragen" } },
+                "content": {
+                    "items": [
+                        { "tpl": "faq_item", "copy": { "de": { "question": "Kann ich als Anfänger beitreten?", "answer": "<div>Ja! Wir haben ein Mentoring-Programm und stellen Einsteigerschiffe.</div>" } }, "content": {} },
+                        { "tpl": "faq_item", "copy": { "de": { "question": "Gibt es eine Aktivitätspflicht?", "answer": "<div>Wir erwarten keine festen Zeiten, aber regelmäßige Teilnahme an Ops freut uns.</div>" } }, "content": {} },
+                        { "tpl": "faq_item", "copy": { "de": { "question": "Darf ich Alts mitbringen?", "answer": "<div>Ja, alle Charaktere müssen aber beim ESI-Check angegeben werden.</div>" } }, "content": {} },
+                        { "tpl": "faq_item", "copy": { "de": { "question": "In welcher Zeitzone seid ihr aktiv?", "answer": "<div>Hauptsächlich EU-TZ, mit Schwerpunkt am Abend und Wochenende.</div>" } }, "content": {} }
+                    ]
+                }
+            },
+            {
+                "tpl": "cta",
+                "copy": {
+                    "de": {
+                        "headline": "Bereit für den Coup?",
+                        "text": "<div>Melde dich auf unserem Discord oder schick eine EVE-Mail an unseren Recruiter.</div>",
+                        "cta_label": "Discord beitreten",
+                        "cta_href": "https://discord.gg/"
+                    }
+                },
+                "data": { "image": "/static/media/cta.jpg" },
+                "content": {}
+            },
+            { "ref": "footer" },
+            { "ref": "end" }
+        ]
+    }
+}

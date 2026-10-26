@@ -1,0 +1,23 @@
+{{- $logo := get .Content "logo" -}}
+{{- $name := copy .Page .Content "home_label" -}}
+{{- $cta := copy .Page .Content "cta_label" -}}
+{{- $ctaHref := copy .Page .Content "cta_href" -}}
+
+<header class="header" data-component="nav" data-shifu-element="{{ .Content.Position }}">
+    <div class="header__inner">
+        <a class="header__brand" href="/">
+            {{ with $logo }}<img class="header__logo" src="{{ . }}" alt="" width="40" height="40" />{{ end }}
+            {{ with $name }}<span class="header__name">{{ . }}</span>{{ end }}
+        </a>
+        <button class="header__toggle" type="button" aria-expanded="false" aria-label="Menü">
+            <span class="header__burger"></span>
+        </button>
+        <nav class="header__nav">
+            <ul class="header__list">
+                {{ .CMS.Render .Args .Page (fmt "%s.nav" .Content.Position) (index .Content.Content "nav") }}
+                <slot name="{{ .Content.Position }}/nav"></slot>
+            </ul>
+            {{ with $cta }}<a class="button button--primary header__cta" href="{{ $ctaHref }}">{{ . }}</a>{{ end }}
+        </nav>
+    </div>
+</header>

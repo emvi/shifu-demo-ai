@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+.faq-item {
+    border-bottom: 1px solid $color-border;
+
+    &__question {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 24px 0;
+        color: $color-heading;
+        font-family: $font-heading;
+        font-size: 1.15rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        list-style: none;
+        cursor: pointer;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: "+";
+            color: $color-accent;
+            font-size: 1.5rem;
+            line-height: 1;
+            transition: transform 0.2s;
+        }
+    }
+
+    &[open] &__question::after {
+        transform: rotate(45deg);
+    }
+
+    &__answer {
+        padding-bottom: 24px;
+        color: $color-muted;
+    }
+}

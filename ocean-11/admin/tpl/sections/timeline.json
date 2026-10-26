@@ -1,0 +1,11 @@
+{
+    "label": "Zeitleiste",
+    "content": {
+        "items": { "label": "Einträge", "tpl_filter": ["timeline_entry"] }
+    },
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "intro": { "label": "Einleitung", "type": "html" }
+    }
+}

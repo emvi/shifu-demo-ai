@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+.timeline {
+    @include section-spacing;
+
+    &__inner {
+        @include container;
+        max-width: 960px;
+    }
+
+    &__intro {
+        max-width: 700px;
+        margin-bottom: 56px;
+        color: $color-muted;
+    }
+
+    &__list {
+        position: relative;
+        margin: 0;
+        padding: 0 0 0 32px;
+        list-style: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            bottom: 8px;
+            left: 5px;
+            width: 1px;
+            background: linear-gradient(to bottom, $color-accent, rgba($color-accent-2, 0.2));
+        }
+    }
+}

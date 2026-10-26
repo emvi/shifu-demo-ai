@@ -1,0 +1,16 @@
+{
+    "label": "_Footer",
+    "layout": true,
+    "content": {
+        "links": { "label": "Links", "tpl_filter": ["footer_link"] }
+    },
+    "copy": {
+        "name": { "label": "Name" },
+        "text": { "label": "Text", "type": "html" },
+        "copyright": { "label": "Copyright" },
+        "disclaimer": { "label": "Rechtlicher Hinweis", "type": "html" }
+    },
+    "data": {
+        "logo": { "label": "Logo", "type": "img" }
+    }
+}

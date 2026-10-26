@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+.feature {
+    position: relative;
+    padding: 40px 32px;
+    background: $color-bg;
+    transition: background 0.25s;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $color-accent;
+        transition: width 0.3s;
+    }
+
+    &:hover {
+        background: $color-panel;
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 24px;
+        color: $color-accent;
+    }
+
+    &__text {
+        color: $color-muted;
+    }
+}

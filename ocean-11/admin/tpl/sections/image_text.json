@@ -1,0 +1,15 @@
+{
+    "label": "Bild + Text",
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "text": { "label": "Text", "type": "html" },
+        "image_alt": { "label": "Bild Alternativtext" },
+        "cta_label": { "label": "Button-Text" },
+        "cta_href": { "label": "Button-Link" }
+    },
+    "data": {
+        "image": { "label": "Bild", "type": "img" },
+        "reverse": { "label": "Bild rechts", "type": "boolean" }
+    }
+}

@@ -1,0 +1,29 @@
+@use "variables" as *;
+
+.stats {
+    padding: 64px 0;
+    background: linear-gradient(90deg, rgba($color-accent, 0.08), rgba($color-accent-2, 0.08));
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+
+    &__inner {
+        @include container;
+    }
+
+    &__headline {
+        margin-bottom: 40px;
+        font-size: 1.2rem;
+        letter-spacing: 0.3em;
+        text-align: center;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+
+        @include md {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

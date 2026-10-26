@@ -1,0 +1,23 @@
+{
+    "tpl": "footer",
+    "data": {
+        "logo": "/static/img/logo.svg"
+    },
+    "copy": {
+        "de": {
+            "name": "Ocean 11",
+            "text": "<div>Elf Piloten, ein Plan. Eine deutschsprachige Corporation in New Eden — PvP, Industrie und jede Menge Coups.</div>",
+            "copyright": "Ocean 11",
+            "disclaimer": "<div>EVE Online und das EVE-Logo sind eingetragene Marken von CCP hf. Alle Rechte vorbehalten. Diese Website ist ein Fan-Projekt und steht in keiner Verbindung zu CCP hf. Verwendete Spielmaterialien gemäß CCP Fan Content Policy.</div>"
+        }
+    },
+    "content": {
+        "links": [
+            { "tpl": "footer_link", "copy": { "de": { "label": "Beitreten", "href": "/beitreten" } }, "content": {} },
+            { "tpl": "footer_link", "copy": { "de": { "label": "Geschichte", "href": "/geschichte" } }, "content": {} },
+            { "tpl": "footer_link", "copy": { "de": { "label": "Impressum", "href": "/impressum" } }, "content": {} },
+            { "tpl": "footer_link", "copy": { "de": { "label": "Datenschutz", "href": "/datenschutz" } }, "content": {} },
+            { "tpl": "footer_link", "copy": { "de": { "label": "EVE Online", "href": "https://www.eveonline.com/" } }, "data": { "external": "on" }, "content": {} }
+        ]
+    }
+}

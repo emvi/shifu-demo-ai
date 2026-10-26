@@ -1,0 +1,9 @@
+{{- $date := copy .Page .Content "date" -}}
+{{- $title := copy .Page .Content "title" -}}
+{{- $text := copy .Page .Content "text" -}}
+
+<li class="timeline-entry" data-shifu-element="{{ .Content.Position }}">
+    {{ with $date }}<span class="timeline-entry__date">{{ . }}</span>{{ end }}
+    {{ with $title }}<h3 class="timeline-entry__title">{{ . }}</h3>{{ end }}
+    {{ with $text }}<div class="timeline-entry__text rich">{{ html . }}</div>{{ end }}
+</li>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ocean 11">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset="1" stop-color="#c47d1f"/>
+    </linearGradient>
+    <linearGradient id="w" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3fc6e6"/>
+      <stop offset="1" stop-color="#145a73"/>
+    </linearGradient>
+  </defs>
+  <!-- Hexagon-Rahmen -->
+  <polygon points="60,4 108.5,32 108.5,88 60,116 11.5,88 11.5,32" fill="#06080b" stroke="url(#g)" stroke-width="4"/>
+  <polygon points="60,16 98,38 98,82 60,104 22,82 22,38" fill="none" stroke="#f2a33a" stroke-opacity="0.35" stroke-width="1"/>
+  <!-- Ozean-Welle -->
+  <path d="M22 78 C34 70, 46 86, 60 78 S86 70, 98 78 L98 82 L60 104 L22 82 Z" fill="url(#w)" opacity="0.85"/>
+  <!-- O -->
+  <circle cx="60" cy="54" r="24" fill="none" stroke="url(#g)" stroke-width="5"/>
+  <!-- 11 -->
+  <path d="M52 44 l4 -3 v26" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M64 44 l4 -3 v26" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>

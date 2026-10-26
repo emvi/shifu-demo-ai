@@ -1,0 +1,23 @@
+{{- $title := copy .Page .Content "title" -}}
+{{- $description := copy .Page .Content "meta_description" -}}
+<!DOCTYPE html>
+<html lang="{{ .Page.Language }}">
+<head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{ $description }}" />
+    <meta name="theme-color" content="#06080b" />
+    <link rel="canonical" href="{{ .Page.CanonicalLink }}" />
+    {{- range $language, $path := .Page.Path }}
+    <link rel="alternate" hreflang="{{ $language }}" href="{{ hostname }}{{ $path }}" />
+    {{- end }}
+    <link rel="icon" type="image/svg+xml" href="/static/img/logo.svg" />
+    <meta property="og:title" content="{{ $title }}" />
+    <meta property="og:description" content="{{ $description }}" />
+    <link rel="stylesheet" href="/static/main.css?v={{ .CMS.LastUpdate }}" />
+    <script defer src="/static/main.js?v={{ .CMS.LastUpdate }}"></script>
+    {{ adminHead .Page }}
+</head>
+<body>

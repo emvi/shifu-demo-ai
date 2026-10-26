@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.timeline-entry {
+    position: relative;
+    padding-bottom: 48px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: -32px;
+        width: 11px;
+        height: 11px;
+        background: $color-bg;
+        border: 2px solid $color-accent;
+        transform: rotate(45deg);
+    }
+
+    &__date {
+        display: block;
+        margin-bottom: 4px;
+        color: $color-accent;
+        font-family: $font-heading;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: $color-muted;
+    }
+}

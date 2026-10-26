@@ -1,0 +1,43 @@
+// Farben angelehnt an den dunklen, kühlen Look von eveonline.com
+$color-bg: #06080b;
+$color-bg-alt: #0d1117;
+$color-panel: #121821;
+$color-border: rgba(255, 255, 255, 0.1);
+$color-text: #d7dde4;
+$color-muted: #8a96a3;
+$color-heading: #ffffff;
+$color-accent: #f2a33a;      // Ocean-11-Gold
+$color-accent-2: #3fc6e6;    // Cyan
+$color-accent-dark: #c47d1f;
+
+$font-body: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-heading: "Rajdhani", "Oxanium", "Eurostile", "Segoe UI", Roboto, sans-serif;
+
+$max-width: 1240px;
+$radius: 2px;
+$gutter: 24px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1080px;
+
+@mixin md {
+    @media (min-width: $breakpoint-md) { @content; }
+}
+
+@mixin lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+}
+
+@mixin container {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $gutter;
+}
+
+@mixin section-spacing {
+    padding: 72px 0;
+
+    @include md {
+        padding: 112px 0;
+    }
+}

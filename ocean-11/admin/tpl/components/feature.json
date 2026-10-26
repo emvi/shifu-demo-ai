@@ -1,0 +1,23 @@
+{
+    "label": "Feature",
+    "copy": {
+        "title": { "label": "Titel" },
+        "text": { "label": "Text", "type": "html" }
+    },
+    "data": {
+        "icon": {
+            "label": "Icon",
+            "type": "select",
+            "options": {
+                "ship": "Schiff",
+                "shield": "Schild",
+                "users": "Gruppe",
+                "target": "Ziel",
+                "chart": "Diagramm",
+                "star": "Stern",
+                "compass": "Kompass",
+                "headset": "Headset"
+            }
+        }
+    }
+}

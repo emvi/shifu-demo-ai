@@ -1,0 +1,6 @@
+{{- $label := copy .Page .Content "label" -}}
+{{- $href := copy .Page .Content "href" -}}
+
+<li class="footer-link" data-shifu-element="{{ .Content.Position }}">
+    <a class="footer-link__link" href="{{ $href }}"{{ if get .Content "external" }} target="_blank" rel="noopener"{{ end }}>{{ default $label "Link" }}</a>
+</li>

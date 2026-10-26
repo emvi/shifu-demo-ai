@@ -1,0 +1,10 @@
+{
+    "label": "Footer-Link",
+    "copy": {
+        "label": { "label": "Text" },
+        "href": { "label": "Link" }
+    },
+    "data": {
+        "external": { "label": "In neuem Tab öffnen", "type": "boolean" }
+    }
+}

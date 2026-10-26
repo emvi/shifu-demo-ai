@@ -1,0 +1,15 @@
+{{- $kicker := copy .Page .Content "kicker" -}}
+{{- $headline := copy .Page .Content "headline" -}}
+{{- $intro := copy .Page .Content "intro" -}}
+
+<section class="timeline" data-shifu-element="{{ .Content.Position }}">
+    <div class="timeline__inner">
+        {{ with $kicker }}<p class="kicker">{{ . }}</p>{{ end }}
+        {{ with $headline }}<h2 class="timeline__headline">{{ . }}</h2>{{ end }}
+        {{ with $intro }}<div class="timeline__intro rich">{{ html . }}</div>{{ end }}
+        <ol class="timeline__list">
+            {{ .CMS.Render .Args .Page (fmt "%s.items" .Content.Position) (index .Content.Content "items") }}
+            <slot name="{{ .Content.Position }}/items"></slot>
+        </ol>
+    </div>
+</section>

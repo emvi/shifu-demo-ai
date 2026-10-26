@@ -1,0 +1,20 @@
+{
+    "tpl": "header",
+    "data": {
+        "logo": "/static/img/logo.svg"
+    },
+    "copy": {
+        "de": {
+            "home_label": "Ocean 11",
+            "cta_label": "Beitreten",
+            "cta_href": "/beitreten"
+        }
+    },
+    "content": {
+        "nav": [
+            { "tpl": "nav_item", "copy": { "de": { "label": "Start", "href": "/" } }, "content": {} },
+            { "tpl": "nav_item", "copy": { "de": { "label": "Geschichte", "href": "/geschichte" } }, "content": {} },
+            { "tpl": "nav_item", "copy": { "de": { "label": "Rekrutierung", "href": "/beitreten" } }, "content": {} }
+        ]
+    }
+}

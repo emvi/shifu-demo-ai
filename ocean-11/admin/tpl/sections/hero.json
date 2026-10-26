@@ -1,0 +1,25 @@
+{
+    "label": "Hero",
+    "copy": {
+        "kicker": { "label": "Dachzeile" },
+        "headline": { "label": "Überschrift" },
+        "text": { "label": "Text", "type": "html" },
+        "cta_label": { "label": "Button 1 Text" },
+        "cta_href": { "label": "Button 1 Link" },
+        "cta2_label": { "label": "Button 2 Text" },
+        "cta2_href": { "label": "Button 2 Link" }
+    },
+    "data": {
+        "image": { "label": "Hintergrundbild", "type": "img" },
+        "size": {
+            "label": "Höhe",
+            "type": "select",
+            "options": { "": "Standard", "full": "Vollbild", "compact": "Kompakt" }
+        },
+        "align": {
+            "label": "Ausrichtung",
+            "type": "select",
+            "options": { "": "Links", "center": "Zentriert" }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use "variables" as *;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    border: 1px solid transparent;
+    border-radius: $radius;
+    font-family: $font-heading;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    // abgeschrägte Ecken im EVE-Stil
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    cursor: pointer;
+
+    &--primary {
+        background: $color-accent;
+        color: #111;
+
+        &:hover {
+            background: $color-heading;
+            color: #111;
+        }
+    }
+
+    &--ghost {
+        border-color: rgba(255, 255, 255, 0.45);
+        background: rgba(255, 255, 255, 0.04);
+        color: $color-heading;
+
+        &:hover {
+            border-color: $color-accent;
+            color: $color-accent;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@use "variables" as *;
+
+.footer {
+    background: $color-bg-alt;
+    border-top: 1px solid $color-border;
+    font-size: 0.95rem;
+
+    &__inner {
+        @include container;
+        display: grid;
+        gap: 40px;
+        padding-top: 64px;
+        padding-bottom: 48px;
+
+        @include md {
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+    &__brand {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    &__logo {
+        flex: none;
+        width: 56px;
+        height: 56px;
+    }
+
+    &__name {
+        display: block;
+        margin-bottom: 8px;
+        color: $color-heading;
+        font-family: $font-heading;
+        font-size: 1.2rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        max-width: 480px;
+        color: $color-muted;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__bottom {
+        @include container;
+        padding-top: 24px;
+        padding-bottom: 32px;
+        border-top: 1px solid $color-border;
+        color: $color-muted;
+        font-size: 0.8rem;
+    }
+
+    &__disclaimer {
+        margin-top: 12px;
+        opacity: 0.8;
+    }
+}
